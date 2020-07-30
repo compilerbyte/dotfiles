@@ -8,6 +8,7 @@ set clipboard=unnamed
 set sw=2
 set noshowmode
 set mouse=a
+set numberwidth=2
 " Helps force plug-ins to load correctly when it is turned back on below.
 "filetype off
 
