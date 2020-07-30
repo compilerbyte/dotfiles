@@ -77,13 +77,13 @@ Plug 'morhetz/gruvbox'
 Plug 'gilgigilgil/anderson.vim'
 
 call plug#end()
-autocmd vimenter * colorscheme gruvbox
+set background=dark
+colorscheme gruvbox 
 let g:gruvbox_italic=1
-colorscheme gruvbox
 let g:gruvbox_contrast_dark = "hard"
 let NERDTreeQuitOnOpen=1
 "let g:airline#extensions#tabline#enabled = 1
-let g:coc_global_extensions = [ 'coc-tsserver' ]
+let g:coc_global_extensions = [ 'coc-tsserver','coc-emmet','coc-html','coc-css','coc-json','coc-git','coc-json' ]
 "let g:airline_powerline_fonts = 1
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
