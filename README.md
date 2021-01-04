@@ -102,6 +102,7 @@ Repository containing my configuration files for bash, vim, etc
   </tr>
 </tbody>
 </table>
+<br>
   <b>Source control</b>
 <table>
 <thead>
@@ -117,6 +118,7 @@ Repository containing my configuration files for bash, vim, etc
   </tr>
 </tbody>
 </table>
+<br>
 <b>Media Tools</b>
 <table>
 <thead>
@@ -129,11 +131,15 @@ Repository containing my configuration files for bash, vim, etc
   <tr>
     <td>VLC</td>
     <td>Documents writer, sheet, presentations</td>
-    <td>KDENLIVE</td>
+  </tr>
+  <tr>
+  <td>KDENLIVE</td>
     <td>video editor</td>
+  </tr>
+  <tr>
     <td>Audacity</td>
     <td>audio editor</td>
-  </tr>
+    </tr>
 </tbody>
 </table>
 <br>
