@@ -22,10 +22,39 @@ Repository containing my configuration files for bash, vim, etc
 </table>
 <br>
 <b>Tools</b>
-gnome-todo
-leafpad
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>gnome-todo</td>
+    <td>To-Do List</td>
+    <td>leafpad</td>
+    <td>Notepad</td>
+  </tr>
+</tbody>
+</table>
+<br>
 <b>Screenshots</b>
-gnome-screenshot
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>gnome-screenshot</td>
+    <td>Images screenshot</td>
+  </tr>
+</tbody>
+</table>
+<br>
 <b>Application launchers</b>
 <table>
 <thead>
@@ -41,20 +70,85 @@ gnome-screenshot
   </tr>
 </tbody>
 </table>
-
+<br>
 <b>File explorers</b>
-  pcmanfm-qt
+  <table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>pcmanfm-qt</td>
+    <td>file explorer</td>
+  </tr>
+</tbody>
+</table>
+<br>
   <b>Editors</b>
-Name	Description
-neovim	Terminal text editor
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>neovim</td>
+    <td>Terminal text editor</td>
+  </tr>
+</tbody>
+</table>
   <b>Source control</b>
-Name
-git
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>git</td>
+    <td>control versions</td>
+  </tr>
+</tbody>
+</table>
 <b>Media Tools</b>
-Name
-vlc
-kdenlive
-audacity
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>VLC</td>
+    <td>Documents writer, sheet, presentations</td>
+    <td>KDENLIVE</td>
+    <td>video editor</td>
+    <td>Audacity</td>
+    <td>audio editor</td>
+  </tr>
+</tbody>
+</table>
+<br>
 <b>Fuzzy finders</b>
-Name	Description
-fzf
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>fzf</td>
+    <td>file fuzzy finder, I mostly used it in vim</td>
+  </tr>
+</tbody>
+</table>
