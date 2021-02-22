@@ -1,6 +1,14 @@
 # configs
 Repository containing my configuration files for bash, vim, etc
 
+#configuration files
+
+i3lock.service is in:
+/etc/systemd/system/i3lock.service
+then
+execute:
+$ systemctl enable i3lock.service
+$ systemctl daemon-reload
 # apps
 
 
