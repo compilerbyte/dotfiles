@@ -41,9 +41,13 @@ $ systemctl daemon-reload
   <tr>
     <td>gnome-todo</td>
     <td>To-Do List</td>
-    <td>leafpad</td>
+    <td>Notepad</td>
+   <tr>
+    <td>gnome-todo</td>
+    <td>To-Do List</td>
     <td>Notepad</td>
   </tr>
+ </tr>
 </tbody>
 </table>
 <br>
