@@ -75,6 +75,8 @@ Plug 'preservim/nerdtree'
 Plug 'easymotion/vim-easymotion'
 Plug 'morhetz/gruvbox'
 Plug 'gilgigilgil/anderson.vim'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 set background=dark
