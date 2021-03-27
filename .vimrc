@@ -77,6 +77,8 @@ Plug 'morhetz/gruvbox'
 Plug 'gilgigilgil/anderson.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 set background=dark
