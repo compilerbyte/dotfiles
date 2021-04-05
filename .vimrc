@@ -50,6 +50,7 @@ set viminfo='100,<9999,s100
 " Automatically save and load folds
 let mapleader = ","
 noremap <leader>w :w<cr>
+noremap <leader>fm :Autoformat<CR>
 noremap <leader>gs :CocSearch
 noremap <leader>fs :NERDTreeFind<cr>
 noremap <leader>fo :NERDTree<cr>
@@ -79,7 +80,8 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
-
+Plug 'Yggdroot/indentLine'
+Plug 'Chiel92/vim-autoformat'
 call plug#end()
 set background=dark
 colorscheme gruvbox 
@@ -90,6 +92,11 @@ let NERDTreeQuitOnOpen=1
 let g:coc_global_extensions = [ 'coc-tsserver','coc-emmet','coc-html','coc-css','coc-json','coc-git','coc-json' ]
 "let g:airline_powerline_fonts = 1
 " GoTo code navigation.
+" enable line numbers
+let NERDTreeShowLineNumbers=1
+" make sure relative line numbers are used
+autocmd FileType nerdtree setlocal relativenumber
+
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
