@@ -119,8 +119,8 @@ bindsym $mod+a focus parent
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 ""
-set $ws2 ""
-set $ws3 ""
+set $ws2 ""
+set $ws3 ""
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
@@ -193,7 +193,7 @@ bar {
   font pango:DejaVu Sans Mono, Icons 8
 	position top
 	height 30
-	status_command i3blocks
+	status_command i3status
 	colors {
 		#background #222222ff
         background #222222
@@ -224,9 +224,8 @@ exec setxkbmap latam
 bindsym Control+Shift+F6 exec brightnessctl set -2%
 bindsym Control+Shift+F7 exec brightnessctl set +2%
 #Wallpaper
-exec feh --bg-fill /home/xhlar/.config/i3/wallpapers/montain_vec.jpg 
+exec feh --bg-fill /home/xhlar/.config/i3/wallpapers/wallpaper.png
 #Script para elegir monitor
 bindsym $mod+p exec /home/xhlar/.config/i3/scripts/monitors.sh
-
-
-
+#Open directory
+bindsym $mod+Shift+Return exec gnome-terminal --working-directory="`xcwd`"
