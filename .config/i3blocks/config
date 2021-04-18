@@ -1,0 +1,68 @@
+# For the benefit of emacs users: -*- shell-script -*-
+#
+#  _ _____ _     _            _
+# (_)___ /| |__ | | ___   ___| | _____
+# | | |_ \| '_ \| |/ _ \ / __| |/ / __|
+# | |___) | |_) | | (_) | (__|   <\__ \
+# |_|____/|_.__/|_|\___/ \___|_|\_\___/
+
+align=center
+separator=false
+color=#f8f8f2
+separator_block_width=15
+markup=pango
+
+[battery]
+
+[ip]
+command=hostname -i | awk '{ print "IP:" $1 }'
+interval=once
+color=#91E78B
+
+[wifi]
+
+[mediaplayer]
+
+[home]
+command=df -h /home | awk 'FNR==2{print $4}'
+interval=3
+label=<span color="#ff79c6"> </span>
+
+[gpu-load]
+[gpu-temperature]
+[cpu_load]
+
+[cpu_temperature]
+
+[ram-free]
+command=free -h --si | awk 'FNR==2{ print $0 }' | awk '{ print $7 }'
+interval=2
+label=<span color="#f1fa8c">M </span>
+
+[volume]
+
+
+[time_cst]
+command=TZ=":US/Central" date '+%I:%M %Z'
+interval=1
+label=<span color="#ff79c6"> </span>
+
+[date]
+command=date '+%Y %B %d  %A'
+interval=60
+label=<span color="#8be9fd"> </span>
+
+[battery]
+command=$HOME/.config/i3blocks/contrib/battery2/battery2
+interval=3
+
+[ram-used]
+command=echo -n '  '; $HOME/.config/i3blocks/contrib/memory/memory | grep -E -o '^[0-9]+.[0-9]G'
+interval=3
+
+[disk-home]
+command=echo -n '  '; df -h -l --output='used' "$HOME" | grep -E -o '[0-9]+G'
+interval=30
+
+[shutdown_menu]
+full_text=<span color="#50fa7b"> </span>
