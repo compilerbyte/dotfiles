@@ -207,25 +207,31 @@ bar {
 	}
 }
 
-#Resaltar
+#Focused Window
 client.focused #bf7500 #bf7500 #bf7500 #ffe57
 
-#gaps outer 20
-#gaps inner 10
-smart_gaps on
-#Ventana sin titulos
+gaps outer 05
+gaps inner 10
+# smart_gaps on
+
+# Windows withouth title
 for_window [class="^.*"] border pixel 3
 
 #picom
 exec picom -b -f --no-vsync
 
+#Keyboard Map
 exec setxkbmap latam
-#Brillo de la pantalla
-bindsym Control+Shift+F6 exec brightnessctl set -2%
-bindsym Control+Shift+F7 exec brightnessctl set +2%
+
+#Brightness
+bindsym Control+Shift+F6 exec brightnessctl s 20%-
+bindsym Control+Shift+F7 exec brightnessctl s +20%
+
 #Wallpaper
 exec feh --bg-fill /home/xhlar/.config/i3/wallpapers/wallpaper.png
-#Script para elegir monitor
+
+#Script Switch Monitor 
 bindsym $mod+p exec /home/xhlar/.config/i3/scripts/monitors.sh
+
 #Open directory
 bindsym $mod+Shift+Return exec gnome-terminal --working-directory="`xcwd`"
