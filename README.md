@@ -1,7 +1,7 @@
 <h1 align="center">dotfiles ❤ ~/</h1>
 
 
-![dikiaap's dotfiles](https://files.dikiaap.id/img/dotfiles/i3.png)
+![xhlar dotfiles](https://files.dikiaap.id/img/dotfiles/i3.png)
 
 <p align="center">
     <b>Screenshots</b><br>
@@ -39,5 +39,3 @@ Repository containing my configuration files.
 
 [![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
 
-To the extent possible under law, [Lars Kappert](https://www.webpro.nl) has waived all copyright and related or
-neighboring rights to this work.
