@@ -36,6 +36,7 @@ Repository containing my configuration files.
     - [Arc Theme](https://github.com/arc-design/arc-theme) (Fork) - A flat theme with transparent elements for GTK 3, GTK 2, and GNOME Shell.
     - [Font Awesome](https://github.com/FortAwesome/Font-Awesome) - Iconic font.
     - [Dark Planet](https://www.pling.com/p/1163924/) - Wallpaper.
+
 ##LICENSE
 [![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
 
