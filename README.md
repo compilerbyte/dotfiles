@@ -39,3 +39,6 @@ Repository containing my configuration files.
 
 [![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
 
+## Thanks to...
+
+- [Dikiaap](https://github.com/dikiaap) and his [dotfiles](https://github.com/dikiaap/dotfiles)
