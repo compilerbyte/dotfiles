@@ -102,3 +102,5 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 :imap ii <Esc>
+:vmap <C-C> "+y
+:vmap <C-V> "+p
