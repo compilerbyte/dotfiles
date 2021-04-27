@@ -13,7 +13,9 @@ set numberwidth=2
 "filetype off
 
 " Turn on syntax highlighting.
+filetype plugin indent on
 syntax on 
+syntax enable
 
 " Display 5 lines above/below the cursor when scrolling with a mouse.
 set scrolloff=5
