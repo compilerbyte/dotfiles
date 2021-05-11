@@ -60,7 +60,8 @@ Plug 'mattn/emmet-vim'
 Plug 'preservim/nerdtree'
 Plug 'easymotion/vim-easymotion'
 Plug 'morhetz/gruvbox'
-Plug 'gilgigilgil/anderson.vim'
+Plug 'gilgilgil/anderson.vim'
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
@@ -75,13 +76,13 @@ filetype plugin indent on
 syntax enable
 
 " Scheme Configuration
-colorscheme gruvbox 
+colorscheme gruvbox
 set background=dark
 let g:gruvbox_italic=1
 let g:gruvbox_contrast_dark = "hard"
 
 
-# NerdTree
+" NerdTree
 autocmd FileType nerdtree setlocal relativenumber
 let NERDTreeQuitOnOpen=1
 let NERDTreeShowLineNumbers=1
@@ -91,7 +92,7 @@ let NERDTreeShowLineNumbers=1
 "let g:airline_powerline_fonts = 1
 
 " Coc
-let g:coc_global_extensions = [ 'coc-tsserver','coc-emmet','coc-html','coc-css','coc-json','coc-git','coc-json' ]
+let g:coc_global_extensions = [ 'coc-tsserver','coc-emmet','coc-html','coc-css','coc-json','coc-git','coc-python' ]
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
