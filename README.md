@@ -24,7 +24,7 @@ Repository containing my configuration files.
         - [z](https://github.com/rupa/z) - Tracks your most used directories, based on frecency.
  - [Git](https://github.com/git/git) - A free and open source distributed version control system.
   - [fzf](https://github.com/junegunn/fzf) - A command-line fuzzy finder.
-  - [z](https://github.com/rupa/z) - A command-line fuzzy finder.
+  <!-- - [z](https://github.com/rupa/z) - A command-line fuzzy finder. -->
 - GUI
     - [i3](https://github.com/i3/i3) - A tiling window manager.
     - [i3blocks](https://github.com/vivien/i3blocks) - A feed generator for text based status bars.

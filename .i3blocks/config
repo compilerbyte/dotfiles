@@ -12,53 +12,84 @@ color=#f8f8f2
 separator_block_width=15
 markup=pango
 
+[bandwidth]
+command=$HOME/.config/i3blocks/contrib/bandwidth/bandwidth
+interval=5
+INTERFACE=wlan0
+INLABEL=IN 
+OUTLABEL=OUT
+#TREAT_UNKNOWN_AS_UP=0
+
+
+[load_average]
+command=echo -n 'CPU: '; $HOME/.config/i3blocks/contrib/load_average/load_average
+interval=10
+
+[temperature]
+command=$HOME/.config/i3blocks/contrib/temperature/temperature
+label= 
+interval=1
+T_WARN=70
+T_CRIT=90
+#SENSOR_CHIP=""
+[cpu_usage]
+command=$HOME/.config/i3blocks/contrib/cpu_usage/cpu_usage
+interval=10
+LABEL=CPU 
+min_width=CPU: 100.00%
+T_WARN=50
+T_CRIT=80
+DECIMALS=2
+
+[ssid]
+command=echo -n ' ' ; $HOME/.config/i3blocks/contrib/ssid/ssid
+INTERFACE=wlan0
+interval=60
+
+[wifi_signal]
+command=$HOME/.config/i3blocks/contrib/wifi/wifi
+label= 
+INTERFACE=wlan0
+interval=60
+COLOR_GE80=#00FF00
+
+[volume]
+command=$HOME/.config/i3blocks/contrib/volume/volume
+#LABEL=♪ 
+LABEL=  
+interval=1
+signal=10
+STEP=5%
+#MIXER=[determined automatically]
+#SCONTROL=[determined automatically]
+
+[date]
+command=date '+%Y-%m-%d %B/%A'
+interval=60
+label=<span color="#8be9fd"> </span>
+
+[time_cst]
+command=TZ=":America/Bogota" date '+%H:%M:%S'
+interval=1
+label=<span color="#ff79c6"> </span>
+
 [battery]
-
-[ip]
-command=hostname -i | awk '{ print "IP:" $1 }'
-interval=once
-color=#91E78B
-
-[wifi]
-
-[mediaplayer]
-
-[home]
-command=df -h /home | awk 'FNR==2{print $4}'
-interval=3
-label=<span color="#ff79c6"> </span>
-
-[gpu-load]
-[gpu-temperature]
-[cpu_load]
-
-[cpu_temperature]
+command=$HOME/.config/i3blocks/contrib/battery2/battery2
+interval=15
 
 [ram-free]
 command=free -h --si | awk 'FNR==2{ print $0 }' | awk '{ print $7 }'
 interval=2
 label=<span color="#f1fa8c">M </span>
 
-[volume]
-
-
-[time_cst]
-command=TZ=":US/Central" date '+%I:%M %Z'
-interval=1
-label=<span color="#ff79c6"> </span>
-
-[date]
-command=date '+%Y %B %d  %A'
-interval=60
-label=<span color="#8be9fd"> </span>
-
-[battery]
-command=$HOME/.config/i3blocks/contrib/battery2/battery2
-interval=3
-
 [ram-used]
 command=echo -n '  '; $HOME/.config/i3blocks/contrib/memory/memory | grep -E -o '^[0-9]+.[0-9]G'
 interval=3
+
+[home]
+command=df -h /home | awk 'FNR==2{print $4}'
+interval=3
+label=<span color="#ff79c6"> </span>
 
 [disk-home]
 command=echo -n '  '; df -h -l --output='used' "$HOME" | grep -E -o '[0-9]+G'
