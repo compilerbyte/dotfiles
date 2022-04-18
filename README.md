@@ -24,6 +24,7 @@ Repository containing my configuration files.
         - [z](https://github.com/rupa/z) - Tracks your most used directories, based on frecency.
  - [Git](https://github.com/git/git) - A free and open source distributed version control system.
   - [fzf](https://github.com/junegunn/fzf) - A command-line fuzzy finder.
+  - [tasks](https://taskwarrior.org/) -  Taskwarrior is a command line todo list manager
   <!-- - [z](https://github.com/rupa/z) - A command-line fuzzy finder. -->
 - GUI
     - [i3](https://github.com/i3/i3) - A tiling window manager.
@@ -37,6 +38,52 @@ Repository containing my configuration files.
     - [Dark Planet](https://www.pling.com/p/1163924/) - Wallpaper.
 
 [![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
+- APPS
+    - [binance](https://) - description
+    - [virtualbox](https://) - description
+    - [seahorse](https://) - description
+    - [keepassxc](https://keepassxc.org/) - Cross-Platform Password Manager
+    - [coinomi](https://) - description
+    - [electrum](https://) - description
+    - [pinta](https://) - description
+    - [pavucontol](https://) - description
+    - [qbittorrent](https://) - description
+    - [staruml](https://) - description
+    - [balena-etcher](https://) - description
+    - [ventoy](https://) - Ventoy is an open source tool to create bootable USB drive for ISO/WIM/IMG/VHD(x)/EFI file
+    - [ncdu](https://) - description
+    - [nasc](https://) - description
+    - [veracrypt](https://) - description
+    - [freetube](https://) - description
+    - [drawio](https://) - description
+    - [electrum](https://) - description
+- DEV 
+    - [docker](https://) - description
+    - [docker-compose](https://) - description
+    - [ifuse](https://) - description
+    - [name](https://) - description
+- STUDY
+    - [gnome-books](https://launchpad.net/ubuntu/+source/gnome-books) - ebook reader 
+    - [gnome-todo](https://) - description
+    - [gnome-clocks](https://) - description
+    - [gnome-pomodoro](https://) - description
+    - [dijo](https://) - habit tracker
+    - [geogebra](https://) - description
+- OFFICE
+    - [xpad](https://launchpad.net/xpad) - Xpad is a sticky note application for jotting down things to remember.
+    - [kile](https://) - description
+    - [libreoffice](https://) - description
+    - [zoom](https://) - description
+    - [dropbox](https://) - description
+    - [phonepresenter](https://) - description
+    - [uxplay](https://) - description
+    - [evolution](https://) - description
+    - [name](https://) - description
+- EDITOR
+    - [obs](https://) - description
+    - [peek](https://) - description
+    - [kdenlive](https://) - description
+    - [gimp](https://) - description
 
 ## Thanks to...
 
