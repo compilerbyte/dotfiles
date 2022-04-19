@@ -79,7 +79,8 @@ Some programs for use
 - [peek](https://github.com/phw/peek) - Simple animated GIF screen recorder with an easy to use interface. 
 - [kdenlive](https://github.com/KDE/kdenlive) - Free and open source video editor.
 - [gimp](https://github.com/GNOME/gimp) - Open souce image editor 
-- [pinta](https://github.com/PintaProject/Pinta) - Simple GTK# Paint Program## Thanks to...
+- [pinta](https://github.com/PintaProject/Pinta) - Simple GTK# Paint Program
 ---
-  [![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
+  ## Thanks to...
 - [Dikiaap](https://github.com/dikiaap) and his [dotfiles](https://github.com/dikiaap/dotfiles)
+[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
