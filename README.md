@@ -43,43 +43,43 @@ Repository containing my configuration files.
 ## List of programs 
 Some programs for use 
 
-    - [coinomi](https://www.coinomi.com/) - Coinomi desktop wallet. Securely store, manage and exchange Bitcoin, Ethereum, and more than 500 other blockchain assets.
-    - [electrum](https://electrum.org/) - Lightweight Bitcoin wallet 
-    - [seahorse](https://aur.archlinux.org/packages/seahorse-git) - GNOME application for managing encryption keys and passwords in the GNOME Keyring.
-    - [keepassxc](https://keepassxc.org/) - Cross-Platform Password Manager
-    - [veracrypt](https://www.veracrypt.fr/code/VeraCrypt/) - a free and open-source utility for on-the-fly encryption.
-    - [pavucontol](https://freedesktop.org/software/pulseaudio/pavucontrol/) - PulseAudio Volume Control (pavucontrol) is a simple GTK based volume control tool ("mixer") for the PulseAudio sound server
-    - [qbittorrent](https://www.qbittorrent.org/) - a cross-platform free and open-source BitTorrent client.
-    - [staruml](https://staruml.io/) - a sophisticated software modeler aimed to support agile and concise modeling
-    - [balena-etcher](https://www.balena.io/etcher/) - Flash OS images to SD cards & USB drives
-    - [ventoy](https://) - Ventoy is an open source tool to create bootable USB drive for ISO/WIM/IMG/VHD(x)/EFI file
-    - [ncdu](https://dev.yorhel.nl/ncdu) -  a disk usage analyzer with an ncurses interface
-    - [freetube](https://github.com/FreeTubeApp/FreeTube) - an open source desktop YouTube player built with privacy in mind.
-    - [drawio](https://app.diagrams.net/) - Flowchart Maker & Online Diagram Software
-    - [docker](https://www.docker.com/) - a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers.
-    - [docker-compose](https://docs.docker.com/compose/install/) - Compose is a tool for defining and running multi-container Docker applications.
-    - [ifuse](https://github.com/libimobiledevice/ifuse) - A fuse filesystem implementation to access the contents of iOS devices
-    - [virtualbox](https://www.virtualbox.org/) - cross-platform virtualization software.
-    - [gnome-books](https://launchpad.net/ubuntu/+source/gnome-books) - ebook reader 
-    - [gnome-todo](https://gitlab.gnome.org/GNOME/gnome-todo) - a personal task manager made to perfectly fit the GNOME desktop
-    - [gnome-clocks](https://gitlab.gnome.org/GNOME/gnome-clocks) - a simple application to show the time and date in multiple locations and set alarms or timer
-    - [gnome-pomodoro](https://github.com/gnome-pomodoro/gnome-pomodoro) - A time management utility for GNOME based on the pomodoro technique!
-    - [dijo](https://github.com/nerdypepper/dijo) - scriptable, curses-based, digital habit tracker
-    - [geogebra](https://geogebra.org/) - an interactive geometry, algebra, statistics and calculus application, intended for learning and teaching mathematics
-    - [xpad](https://launchpad.net/xpad) - Xpad is a sticky note application for jotting down things to remember.
-    - [kile](https://kile.sourceforge.io/) - TeX/LaTeX editor to edit TeX/LaTeX source code
-    - [libreoffice](https://www.libreoffice.org/) -  free and open-source office productivity software suite
-    - [zoom](https://zoom.com) -  videotelephony software program
-    - [dropbox](https://dropbox.com) - file hosting service 
-    - [phonepresenter](https://phonepresenter.github.io/) - Control presentations from your smartphone
-    - [uxplay](https://github.com/antimof/UxPlay) - dAirPlay Unix mirroring server
-    - [evolution](https://) - free and open-source cross-platform email client
-    - [thunderbird](https://www.thunderbird.net/) - free and open-source cross-platform email client
-    - [ghostwriter](https://wereturtle.github.io/ghostwriter/) - Markdown Writer 
-    - [obs](https://github.com/obsproject/obs-studio) - description
-    - [peek](https://github.com/phw/peek) - Simple animated GIF screen recorder with an easy to use interface. 
-    - [kdenlive](https://github.com/KDE/kdenlive) - Free and open source video editor.
-    - [gimp](https://github.com/GNOME/gimp) - description
-    - [pinta](https://github.com/PintaProject/Pinta) - Simple GTK# Paint Program## Thanks to...
+- [coinomi](https://www.coinomi.com/) - Coinomi desktop wallet. Securely store, manage and exchange Bitcoin, Ethereum, and more than 500 other blockchain assets.
+- [electrum](https://electrum.org/) - Lightweight Bitcoin wallet 
+- [seahorse](https://aur.archlinux.org/packages/seahorse-git) - GNOME application for managing encryption keys and passwords in the GNOME Keyring.
+- [keepassxc](https://keepassxc.org/) - Cross-Platform Password Manager
+- [veracrypt](https://www.veracrypt.fr/code/VeraCrypt/) - a free and open-source utility for on-the-fly encryption.
+- [pavucontol](https://freedesktop.org/software/pulseaudio/pavucontrol/) - PulseAudio Volume Control (pavucontrol) is a simple GTK based volume control tool ("mixer") for the PulseAudio sound server
+- [qbittorrent](https://www.qbittorrent.org/) - a cross-platform free and open-source BitTorrent client.
+- [staruml](https://staruml.io/) - a sophisticated software modeler aimed to support agile and concise modeling
+- [balena-etcher](https://www.balena.io/etcher/) - Flash OS images to SD cards & USB drives
+- [ventoy](https://) - Ventoy is an open source tool to create bootable USB drive for ISO/WIM/IMG/VHD(x)/EFI file
+- [ncdu](https://dev.yorhel.nl/ncdu) -  a disk usage analyzer with an ncurses interface
+- [freetube](https://github.com/FreeTubeApp/FreeTube) - an open source desktop YouTube player built with privacy in mind.
+- [drawio](https://app.diagrams.net/) - Flowchart Maker & Online Diagram Software
+- [docker](https://www.docker.com/) - a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers.
+- [docker-compose](https://docs.docker.com/compose/install/) - Compose is a tool for defining and running multi-container Docker applications.
+- [ifuse](https://github.com/libimobiledevice/ifuse) - A fuse filesystem implementation to access the contents of iOS devices
+- [virtualbox](https://www.virtualbox.org/) - cross-platform virtualization software.
+- [gnome-books](https://launchpad.net/ubuntu/+source/gnome-books) - ebook reader 
+- [gnome-todo](https://gitlab.gnome.org/GNOME/gnome-todo) - a personal task manager made to perfectly fit the GNOME desktop
+- [gnome-clocks](https://gitlab.gnome.org/GNOME/gnome-clocks) - a simple application to show the time and date in multiple locations and set alarms or timer
+- [gnome-pomodoro](https://github.com/gnome-pomodoro/gnome-pomodoro) - A time management utility for GNOME based on the pomodoro technique!
+- [dijo](https://github.com/nerdypepper/dijo) - scriptable, curses-based, digital habit tracker
+- [geogebra](https://geogebra.org/) - an interactive geometry, algebra, statistics and calculus application, intended for learning and teaching mathematics
+- [xpad](https://launchpad.net/xpad) - Xpad is a sticky note application for jotting down things to remember.
+- [kile](https://kile.sourceforge.io/) - TeX/LaTeX editor to edit TeX/LaTeX source code
+- [libreoffice](https://www.libreoffice.org/) -  free and open-source office productivity software suite
+- [zoom](https://zoom.com) -  videotelephony software program
+- [dropbox](https://dropbox.com) - file hosting service 
+- [phonepresenter](https://phonepresenter.github.io/) - Control presentations from your smartphone
+- [uxplay](https://github.com/antimof/UxPlay) - dAirPlay Unix mirroring server
+- [evolution](https://) - free and open-source cross-platform email client
+- [thunderbird](https://www.thunderbird.net/) - free and open-source cross-platform email client
+- [ghostwriter](https://wereturtle.github.io/ghostwriter/) - Markdown Writer 
+- [obs](https://github.com/obsproject/obs-studio) - description
+- [peek](https://github.com/phw/peek) - Simple animated GIF screen recorder with an easy to use interface. 
+- [kdenlive](https://github.com/KDE/kdenlive) - Free and open source video editor.
+- [gimp](https://github.com/GNOME/gimp) - description
+- [pinta](https://github.com/PintaProject/Pinta) - Simple GTK# Paint Program## Thanks to...
 
 - [Dikiaap](https://github.com/dikiaap) and his [dotfiles](https://github.com/dikiaap/dotfiles)
