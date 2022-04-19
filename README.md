@@ -38,12 +38,11 @@ Repository containing my configuration files.
     - [Arc Theme](https://github.com/arc-design/arc-theme) (Fork) - A flat theme with transparent elements for GTK 3, GTK 2, and GNOME Shell.
     - [Font Awesome](https://github.com/FortAwesome/Font-Awesome) - Iconic font.
     - [Dark Planet](https://www.pling.com/p/1163924/) - Wallpaper.
-  [![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
 ---
 ## List of programs 
 Some programs for use 
 
-- [coinomi](https://www.coinomi.com/) - Coinomi desktop wallet. Securely store, manage and exchange Bitcoin, Ethereum, and more than 500 other blockchain assets.
+- [coinomi](https://www.coinomi.com/) - Coinomi desktop wallet. Securely store, manage and exchange Bitcoin, Ethereum, and more than 500 other blockchain assets
 - [electrum](https://electrum.org/) - Lightweight Bitcoin wallet 
 - [seahorse](https://aur.archlinux.org/packages/seahorse-git) - GNOME application for managing encryption keys and passwords in the GNOME Keyring.
 - [keepassxc](https://keepassxc.org/) - Cross-Platform Password Manager
@@ -76,10 +75,11 @@ Some programs for use
 - [evolution](https://) - free and open-source cross-platform email client
 - [thunderbird](https://www.thunderbird.net/) - free and open-source cross-platform email client
 - [ghostwriter](https://wereturtle.github.io/ghostwriter/) - Markdown Writer 
-- [obs](https://github.com/obsproject/obs-studio) - description
+- [obs](https://github.com/obsproject/obs-studio) - Screen recorder
 - [peek](https://github.com/phw/peek) - Simple animated GIF screen recorder with an easy to use interface. 
 - [kdenlive](https://github.com/KDE/kdenlive) - Free and open source video editor.
-- [gimp](https://github.com/GNOME/gimp) - description
+- [gimp](https://github.com/GNOME/gimp) - Open souce image editor 
 - [pinta](https://github.com/PintaProject/Pinta) - Simple GTK# Paint Program## Thanks to...
-
+---
+  [![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
 - [Dikiaap](https://github.com/dikiaap) and his [dotfiles](https://github.com/dikiaap/dotfiles)
