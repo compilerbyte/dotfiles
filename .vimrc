@@ -36,25 +36,33 @@ set wildignore+=**/.git/*
 " Leader Keys -  Automatically save and load folds
 let mapleader = ","
 noremap <leader>w :w<cr>
-noremap <leader>fm :Autoformat<CR>
-noremap <leader>gs :CocSearch
-" Tree Finder
+noremap <leader>q :q<cr>
+noremap <leader>fq :q!<cr>
+"Git
+noremap <C-p> :GFiles<CR>
+"Tree Finder
 noremap <leader>fs :NERDTreeFind<cr>
 noremap <leader>fo :NERDTree<cr>
-noremap <C-p> :GFiles<CR>
-noremap <leader>pf :Files<cr>
-noremap <leader>eq :q<cr>
-noremap <leader>fq :q!<cr>
+"Others
+noremap <leader>fm :Autoformat<CR>
+noremap <leader>gs :CocSearch
 noremap <leader>bp :bp<cr>
 noremap <leader>bo :bn<cr>
 noremap <leader>go   :!google-chrome-stable %<cr>
+"Easymotion
 nmap <leader>s <Plug>(easymotion-s2)
 " noremap <leader><cr> <cr><c-w>h:q<cr>
 
 " Map Keys
-:imap ii <Esc>
+" :imap ii <Esc>
 :vmap <C-C> "+y
 :vmap <C-V> "+p
+
+"Fzf
+nnoremap <silent> ;f <cmd>:Files<cr>
+" nnoremap <silent> ;r <cmd>Telescope live_grep<cr>
+" nnoremap <silent> \\ <cmd>Telescope buffers<cr>
+" nnoremap <silent> ;; <cmd>Telescope help_tags<cr>
 
 " Create Folder Plugins
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -65,26 +73,26 @@ endif
 
 "Plugins
 call plug#begin('~/.vim/plugged')
-" Plug 'pangloss/vim-javascript'    " JavaScript support
+Plug 'pangloss/vim-javascript'    " JavaScript support
 " Plug 'leafgarland/typescript-vim' " TypeScript syntax
 Plug 'ryanoasis/vim-devicons'
 " Plug 'ThePrimeagen/vim-be-good'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline'
 Plug 'mattn/emmet-vim'
 Plug 'preservim/nerdtree'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'easymotion/vim-easymotion'
 Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
-Plug 'Yggdroot/indentLine'
-Plug 'Chiel92/vim-autoformat'
-" Plug 'puremourning/vimspector'
+" Plug 'Yggdroot/indentLine'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 call plug#end()
 
 
@@ -132,3 +140,10 @@ if (empty($TMUX))
   endif
 endif
 set guifont=DroidSansMono\ Nerd\ Font\ 11
+
+"Python Settings
+autocmd FileType python map <buffer> <F2> :w<CR>:exec '! python' shellescape(@%, 1)<CR>
+autocmd FileType python imap <buffer> <F2> <esc>:w<CR>:exec '! python' shellescape(@%, 1)<CR>
+
+"Node Settings
+autocmd FileType javascript map <buffer> <F2> :w<CR>:exec '! node' shellescape(@%, 1)<CR>

@@ -63,6 +63,7 @@ Some programs for use
 - [gnome-todo](https://gitlab.gnome.org/GNOME/gnome-todo) - a personal task manager made to perfectly fit the GNOME desktop
 - [gnome-clocks](https://gitlab.gnome.org/GNOME/gnome-clocks) - a simple application to show the time and date in multiple locations and set alarms or timer
 - [gnome-pomodoro](https://github.com/gnome-pomodoro/gnome-pomodoro) - A time management utility for GNOME based on the pomodoro technique!
+- [notes](https://github.com/pimterry/notes) - Simple delightful note taking, with more unix and less lock-in.
 - [dijo](https://github.com/nerdypepper/dijo) - scriptable, curses-based, digital habit tracker
 - [geogebra](https://geogebra.org/) - an interactive geometry, algebra, statistics and calculus application, intended for learning and teaching mathematics
 - [xpad](https://launchpad.net/xpad) - Xpad is a sticky note application for jotting down things to remember.

@@ -121,4 +121,5 @@ alias la='exa -lah'
 alias ll='ls -lh'
 alias ls='exa'
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
-
+export EDITOR=vim
+export NOTES_DIRECTORY=~/Dropbox/notes
