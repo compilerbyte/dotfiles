@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 10
+font pango:monospace 4
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -40,38 +40,20 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-#lock screen
-bindsym Control+Mod1+l exec "i3lock -c 000000"
-
-#auto lock the screen
-exec xautolock -detectsleep -locker i3lock 
-
-#set lock when detected 
-exec xss-lock i3lock 
-
-
-#notify low battery
-exec --no-startup-id i3-battery-popup -L 15 -t 1m
 # start a terminal
-bindsym $mod+Return exec termite
+# bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec gnome-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
-#take screenshot
-bindsym Print exec gnome-screenshot
-bindsym Shift+Print exec gnome-screenshot -a
-
-
 # start dmenu (a program launcher)
-bindsym $mod+d exec rofi -show run
-bindsym $mod+Shift+d exec rofi -show window
-
-# bindsym $mod+d exec dmenu_run -i -nf '#ffb52a' -sb '#ffb52a' -sf '#222'
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+# bindsym $mod+d exec --no-startup-id dmenu_run
+# A more modern dmenu replacement is rofi:
+# bindcode $mod+40 exec "rofi -modi drun,run -show drun"
+# There also is i3-dmenu-desktop which only displays applications shipping a
+# .desktop file. It is a wrapper around dmenu, so you need that installed.
+# bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+j focus left
@@ -175,16 +157,16 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 5 px or 5 ppt
-        bindsym k resize grow height 5 px or 5 ppt
-        bindsym l resize shrink height 5 px or 5 ppt
-        bindsym ntilde resize grow width 5 px or 5 ppt
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym ntilde resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 5 px or 5 ppt
-        bindsym Down resize grow height 5 px or 5 ppt
-        bindsym Up resize shrink height 5 px or 5 ppt
-        bindsym Right resize grow width 5 px or 5 ppt
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -201,7 +183,8 @@ bar {
   font pango:Hack, Icons 8
 	position top
 	height 30
-	status_command i3status
+	# status_command i3status
+	status_command i3blocks
 	colors {
 		#background #222222ff
         background #222222
@@ -214,33 +197,67 @@ bar {
 		urgent_workspace   #2f343a #900000 #ffffff
 	}
 }
-
+#MyConfig
+#
+#
+#
 #Focused Window
-client.focused #bf7500 #bf7500 #bf7500 #ffe57
-
-gaps outer 05
-gaps inner 10
-# smart_gaps on
-
-# Windows withouth title
-for_window [class="^.*"] border pixel 3
-
-#picom
-exec picom -b -f --no-vsync
-
-#Keyboard Map
-exec setxkbmap latam
+client.focused #ffe57 #bf7500 #ffe57
 
 #Brightness
 bindsym Control+Shift+F6 exec brightnessctl s 20%-
 bindsym Control+Shift+F7 exec brightnessctl s +20%
 
+#Lock Screen
+bindsym Control+Mod1+l exec "i3lock -c 000000"
+
+#Run Nautilus
+bindsym $mod+n exec nautilus
+
+#Take Screenshot
+bindsym Print exec gnome-screenshot
+bindsym Shift+Print exec gnome-screenshot -a
+
+#Notify Low Battery
+exec --no-startup-id i3-battery-popup -L 15 -t 1m
+
+#Start dmenu ( a program launcher  )
+bindsym $mod+d exec rofi -show run
+
+#Gaps
+gaps outer 1
+gaps inner 10
+
+#Windows Withouth tittle
+for_window [class="^.*"] border pixel 3
+
+#Picom
+exec picom -b -f --no-vsync
+
+#Keyboard Language Default
+exec setxkbmap latam
+
+#Switch KeyBoard Language
+bindsym $mod+Shift+z exec setxkbmap latam
+bindsym $mod+z exec setxkbmap us
+
+
 #Wallpaper
-exec feh --bg-fill /home/xhlar/.config/i3/wallpapers/wallpaper.png
+exec feh --bg-fill $HOME/.config/i3/wallpapers/wallpaper.jpg
 
 #Script Switch Monitor 
-bindsym $mod+p exec /home/xhlar/.config/i3/scripts/monitors.sh
+bindsym $mod+p exec $HOME/.config/i3/scripts/display.sh
 
-#Open directory
-bindsym $mod+Shift+Return exec termite --directory="`xcwd`"
-# bindsym $mod+Shift+Return exec gnome-terminal --working-directory="`xcwd`"
+#Open Directory
+bindsym $mod+Shift+Return exec gnome-terminal --working-directory="`xcwd`"
+
+#set monitor workspace 
+workspace $ws9 output VGA-0 
+
+#move container to the next output
+bindsym $mod+Shift+x move container to output next
+
+#focus other monitor 
+bindsym $mod+x focus output left
+
+
