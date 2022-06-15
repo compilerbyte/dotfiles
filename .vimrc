@@ -23,7 +23,6 @@ set incsearch " Enable incremental search
 set ignorecase " Include matching uppercase words with lowercase search term
 set smartcase " Include only uppercase words with uppercase search term
 set viminfo='100,<9999,s100 " Store info from no more than 100 files at a time, 9999 lines of text, 100kb of data. Useful for copying large amounts of data between files.
-
 " Ignore files
 set wildignore+=*.pyc
 set wildignore+=*_build/*
@@ -33,42 +32,31 @@ set wildignore+=**/android/*
 set wildignore+=**/ios/*
 set wildignore+=**/.git/*
 
-" Leader Keys -  Automatically save and load folds
-let mapleader = ","
-noremap <leader>w :w<cr>
-noremap <leader>q :q<cr>
-noremap <leader>fq :q!<cr>
-"Git
-noremap <C-p> :GFiles<CR>
-"Tree Finder
-noremap <leader>fs :NERDTreeFind<cr>
-noremap <leader>fo :NERDTree<cr>
-"Others
-noremap <leader>fm :Autoformat<CR>
-noremap <leader>gs :CocSearch
-noremap <leader>bp :bp<cr>
-noremap <leader>bo :bn<cr>
-noremap <leader>go   :!google-chrome-stable %<cr>
-"Easymotion
-nmap <leader>s <Plug>(easymotion-s2)
-" noremap <leader><cr> <cr><c-w>h:q<cr>
+set guifont=DroidSansMono\ Nerd\ Font\ 11
 
-" Map Keys
-" :imap ii <Esc>
-:vmap <C-C> "+y
-:vmap <C-V> "+p
-
-"Fzf
-nnoremap <silent> ;f <cmd>:Files<cr>
-" nnoremap <silent> ;r <cmd>Telescope live_grep<cr>
-" nnoremap <silent> \\ <cmd>Telescope buffers<cr>
-" nnoremap <silent> ;; <cmd>Telescope help_tags<cr>
+" Options, Colors, Fonts, and Syntax
+filetype plugin indent on
+syntax enable
 
 " Create Folder Plugins
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+" termguicolors
+if (empty($TMUX))
+  if (has("nvim"))
+    "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  endif
+  "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
+  "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
+  " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
+  if (has("termguicolors"))
+    set termguicolors
+  endif
 endif
 
 "Plugins
@@ -87,18 +75,48 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'easymotion/vim-easymotion'
 Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-commentary'
-" Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 " Plug 'Yggdroot/indentLine'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'vimwiki/vimwiki'
+" Plug 'davidhalter/jedi-vim'
+
 call plug#end()
 
+" Leader Keys -  Automatically save and load folds
+let mapleader = ","
+noremap <leader>w :w<cr>
+noremap <leader>eq :q<cr>
+noremap <leader>fq :q!<cr>
+"Git
+noremap <C-p> :GFiles<CR>
+"Tree Finder
+noremap <leader>fs :NERDTreeFind<cr>
+noremap <leader>fo :NERDTree<cr>
+"Others
+noremap <leader>fm :Autoformat<CR>
+noremap <leader>gs :CocSearch
+noremap <leader>bp :bp<cr>
+noremap <leader>bo :bn<cr>
+noremap <leader>bd :bd<cr>
+noremap <leader>go   :!google-chrome-stable %<cr>
+"Easymotion
+nmap <leader>s <Plug>(easymotion-s2)
+" noremap <leader><cr> <cr><c-w>h:q<cr>
 
-" Options, Colors, Fonts, and Syntax
-filetype plugin indent on
-syntax enable
+" Map Keys
+" :imap ii <Esc>
+:vmap <C-C> "+y
+:vmap <C-V> "+p
+
+"Fzf
+nnoremap <silent> ;f <cmd>:Files<cr>
+" nnoremap <silent> ;r <cmd>Telescope live_grep<cr>
+" nnoremap <silent> \\ <cmd>Telescope buffers<cr>
+" nnoremap <silent> ;; <cmd>Telescope help_tags<cr>
 
 " Scheme Configuration
 set background=dark
@@ -106,6 +124,10 @@ let g:gruvbox_italic=1
 let g:gruvbox_contrast_dark = "hard"
 colorscheme gruvbox
 
+nmap <Leader>vf <Plug>VimwikiVSplitLink
+nmap <Leader>vs :vs \| :VimwikiIndex<CR>
+let g:vimwiki_list = [{'path': '~/Dropbox/notes',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
 
 " NerdTree
 autocmd FileType nerdtree setlocal relativenumber
@@ -117,7 +139,7 @@ let NERDTreeShowLineNumbers=1
 let g:airline_powerline_fonts = 1
 
 " Coc
-let g:coc_global_extensions = [ 'coc-tsserver','coc-emmet','coc-html','coc-css','coc-json','coc-git','coc-python', 'coc-phpls']
+let g:coc_global_extensions = [ 'coc-tsserver','coc-python','coc-emmet','coc-html','coc-css','coc-json','coc-git', 'coc-phpls']
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
@@ -126,24 +148,16 @@ nmap <silent> gr <Plug>(coc-references)
 "Vimspector
 " let g:vimspector_enable_mappings = 'HUMAN'
 
-" Map Keys
-if (empty($TMUX))
-  if (has("nvim"))
-    "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
-    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-  endif
-  "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
-  "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
-  " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
-  if (has("termguicolors"))
-    set termguicolors
-  endif
-endif
-set guifont=DroidSansMono\ Nerd\ Font\ 11
+
+vmap <leader>gf  <Plug>(coc-format-selected)
+nmap <leader>gf  <Plug>(coc-format-selected)
+
 
 "Python Settings
 autocmd FileType python map <buffer> <F2> :w<CR>:exec '! python' shellescape(@%, 1)<CR>
-autocmd FileType python imap <buffer> <F2> <esc>:w<CR>:exec '! python' shellescape(@%, 1)<CR>
+
+"C Settings
+autocmd BufEnter *.c map <F2> :w <CR> :!gcc % -o %< && ./%< <CR>
 
 "Node Settings
 autocmd FileType javascript map <buffer> <F2> :w<CR>:exec '! node' shellescape(@%, 1)<CR>

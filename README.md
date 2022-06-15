@@ -19,20 +19,20 @@ Repository containing my configuration files.
 
 ## Details 
 - CLI
-    - [exa](https://github.com/ogham/exa) - A modern replacement for ls
-    - [Zsh](https://github.com/zsh-users/zsh) - A shell designed for interactive use, although it is also a powerful scripting language.
+     - [exa](https://github.com/ogham/exa) - A modern replacement for ls
+     - [Zsh](https://github.com/zsh-users/zsh) - A shell designed for interactive use, although it is also a powerful scripting language.
         - [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) - An open source, community-driven framework for managing your Zsh configuration.
         - [z](https://github.com/rupa/z) - Tracks your most used directories, based on frecency.
- - [Git](https://github.com/git/git) - A free and open source distributed version control system.
-  - [fzf](https://github.com/junegunn/fzf) - A command-line fuzzy finder.
-  - [tasks](https://taskwarrior.org/) -  Taskwarrior is a command line todo list manager
+     - [Git](https://github.com/git/git) - A free and open source distributed version control system.
+     - [fzf](https://github.com/junegunn/fzf) - A command-line fuzzy finder.
+     - [tasks](https://taskwarrior.org/) -  Taskwarrior is a command line todo list manager
 - GUI
     - [i3](https://github.com/i3/i3) - A tiling window manager.
     - [i3-battery-popup](https://website.org/) - pop up battery
     - [i3blocks](https://github.com/vivien/i3blocks) - A feed generator for text based status bars.
         - [i3blocks-contrib](https://github.com/vivien/i3blocks-contrib) - A set of scripts for i3blocks, contributed by the community.
     - [Rofi](https://github.com/davatorium/rofi) - A window switcher, application launcher and dmenu replacement.
-    - [arandr](https://github.com/) - description
+    - [arandr](https://github.com/) - xrandr gui
     - [picom](https://github.com/yshui/picom) - A lightweight compositor for X11.
     - [Gnome Terminal](https://github.com/GNOME/gnome-terminal) - A cross-platform, GPU-accelerated terminal emulator.
     - [Arc Theme](https://github.com/arc-design/arc-theme) (Fork) - A flat theme with transparent elements for GTK 3, GTK 2, and GNOME Shell.
@@ -71,16 +71,19 @@ Some programs for use
 - [libreoffice](https://www.libreoffice.org/) -  free and open-source office productivity software suite
 - [zoom](https://zoom.com) -  videotelephony software program
 - [dropbox](https://dropbox.com) - file hosting service 
-- [phonepresenter](https://phonepresenter.github.io/) - Control presentations from your smartphone
-- [uxplay](https://github.com/antimof/UxPlay) - dAirPlay Unix mirroring server
-- [evolution](https://) - free and open-source cross-platform email client
 - [thunderbird](https://www.thunderbird.net/) - free and open-source cross-platform email client
 - [ghostwriter](https://wereturtle.github.io/ghostwriter/) - Markdown Writer 
-- [obs](https://github.com/obsproject/obs-studio) - Screen recorder
+- Presentation and content creation
+- [uxplay](https://github.com/antimof/UxPlay) - dAirPlay Unix mirroring server
+- [phonepresenter](https://phonepresenter.github.io/) - Control presentations from your smartphone
+- [obs](https://github.com/obsproject/obs-studio) - Free and open source software for live streaming and screen recording- 
 - [peek](https://github.com/phw/peek) - Simple animated GIF screen recorder with an easy to use interface. 
 - [kdenlive](https://github.com/KDE/kdenlive) - Free and open source video editor.
 - [gimp](https://github.com/GNOME/gimp) - Open souce image editor 
-- [pinta](https://github.com/PintaProject/Pinta) - Simple GTK# Paint Program
+- [pinta](https://github.com/PintaProject/Pinta) - Simple GTK Paint Program
+- [screenkey](https://github.com/wavexx/screenkey) - A screencast tool to display your keys inspired by Screenflick
+- [gromit-mpx](https://github.com/bk138/gromit-mpx) - an on-screen annotation tool that works with any Unix desktop
+- [audacity](https://github.com/audacity/audacity) - Audio Editor
 ---
   ## Thanks to...
 - [Dikiaap](https://github.com/dikiaap) and his [dotfiles](https://github.com/dikiaap/dotfiles)
