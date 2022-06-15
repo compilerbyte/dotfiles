@@ -74,6 +74,7 @@ Some programs for use
 - [thunderbird](https://www.thunderbird.net/) - free and open-source cross-platform email client
 - [ghostwriter](https://wereturtle.github.io/ghostwriter/) - Markdown Writer 
 - Presentation and content creation
+- [rclone](https://github.com/rclone/rclone) - is a command-line program to sync files and directories to and from different cloud storage providers.
 - [uxplay](https://github.com/antimof/UxPlay) - dAirPlay Unix mirroring server
 - [phonepresenter](https://phonepresenter.github.io/) - Control presentations from your smartphone
 - [obs](https://github.com/obsproject/obs-studio) - Free and open source software for live streaming and screen recording- 
