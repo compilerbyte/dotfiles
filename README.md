@@ -49,16 +49,12 @@ Some programs for use
 - [veracrypt](https://www.veracrypt.fr/code/VeraCrypt/) - a free and open-source utility for on-the-fly encryption.
 - [pavucontol](https://freedesktop.org/software/pulseaudio/pavucontrol/) - PulseAudio Volume Control (pavucontrol) is a simple GTK based volume control tool ("mixer") for the PulseAudio sound server
 - [qbittorrent](https://www.qbittorrent.org/) - a cross-platform free and open-source BitTorrent client.
-- [staruml](https://staruml.io/) - a sophisticated software modeler aimed to support agile and concise modeling
 - [balena-etcher](https://www.balena.io/etcher/) - Flash OS images to SD cards & USB drives
 - [ventoy](https://) - Ventoy is an open source tool to create bootable USB drive for ISO/WIM/IMG/VHD(x)/EFI file
 - [ncdu](https://dev.yorhel.nl/ncdu) -  a disk usage analyzer with an ncurses interface
 - [freetube](https://github.com/FreeTubeApp/FreeTube) - an open source desktop YouTube player built with privacy in mind.
 - [drawio](https://app.diagrams.net/) - Flowchart Maker & Online Diagram Software
-- [docker](https://www.docker.com/) - a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers.
-- [docker-compose](https://docs.docker.com/compose/install/) - Compose is a tool for defining and running multi-container Docker applications.
 - [ifuse](https://github.com/libimobiledevice/ifuse) - A fuse filesystem implementation to access the contents of iOS devices
-- [virtualbox](https://www.virtualbox.org/) - cross-platform virtualization software.
 - [gnome-books](https://launchpad.net/ubuntu/+source/gnome-books) - ebook reader 
 - [gnome-todo](https://gitlab.gnome.org/GNOME/gnome-todo) - a personal task manager made to perfectly fit the GNOME desktop
 - [gnome-clocks](https://gitlab.gnome.org/GNOME/gnome-clocks) - a simple application to show the time and date in multiple locations and set alarms or timer
@@ -73,7 +69,14 @@ Some programs for use
 - [dropbox](https://dropbox.com) - file hosting service 
 - [thunderbird](https://www.thunderbird.net/) - free and open-source cross-platform email client
 - [ghostwriter](https://wereturtle.github.io/ghostwriter/) - Markdown Writer 
-- Presentation and content creation
+- Programming
+- [staruml](https://staruml.io/) - a sophisticated software modeler aimed to support agile and concise modeling
+- [sqlitestudio](https://sqlitestudio.pl/) - Create, edit, browse SQLite databases.
+- [mysql-workbench](https://www.mysql.com/products/workbench/) - a visual database design tool that integrates SQL development, administration, database design, creation and maintenance into a single integrated development environment for the MySQL 
+- [docker](https://www.docker.com/) - a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers.
+- [docker-compose](https://docs.docker.com/compose/install/) - Compose is a tool for defining and running multi-container Docker applications.
+- [virtualbox](https://www.virtualbox.org/) - cross-platform virtualization software.
+- - Presentation and content creation
 - [rclone](https://github.com/rclone/rclone) - is a command-line program to sync files and directories to and from different cloud storage providers.
 - [uxplay](https://github.com/antimof/UxPlay) - dAirPlay Unix mirroring server
 - [phonepresenter](https://phonepresenter.github.io/) - Control presentations from your smartphone
@@ -88,4 +91,3 @@ Some programs for use
 ---
   ## Thanks to...
 - [Dikiaap](https://github.com/dikiaap) and his [dotfiles](https://github.com/dikiaap/dotfiles)
-[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)

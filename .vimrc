@@ -28,6 +28,7 @@ set wildignore+=*.pyc
 set wildignore+=*_build/*
 set wildignore+=**/coverage/*
 set wildignore+=**/node_modules/*
+set wildignore+=**/node_modules/
 set wildignore+=**/android/*
 set wildignore+=**/ios/*
 set wildignore+=**/.git/*
@@ -37,6 +38,7 @@ set guifont=DroidSansMono\ Nerd\ Font\ 11
 " Options, Colors, Fonts, and Syntax
 filetype plugin indent on
 syntax enable
+syntax on
 
 " Create Folder Plugins
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -78,9 +80,10 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
+Plug 'vim-airline/vim-airline'
 " Plug 'Yggdroot/indentLine'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
+" Plug 'nvim-lua/plenary.nvim'
+" Plug 'nvim-telescope/telescope.nvim'
 Plug 'vimwiki/vimwiki'
 " Plug 'davidhalter/jedi-vim'
 
@@ -93,39 +96,31 @@ noremap <leader>eq :q<cr>
 noremap <leader>fq :q!<cr>
 "Git
 noremap <C-p> :GFiles<CR>
-"Tree Finder
-noremap <leader>fs :NERDTreeFind<cr>
-noremap <leader>fo :NERDTree<cr>
 "Others
 noremap <leader>fm :Autoformat<CR>
-noremap <leader>gs :CocSearch
 noremap <leader>bp :bp<cr>
 noremap <leader>bo :bn<cr>
 noremap <leader>bd :bd<cr>
-noremap <leader>go   :!google-chrome-stable %<cr>
 "Easymotion
 nmap <leader>s <Plug>(easymotion-s2)
-" noremap <leader><cr> <cr><c-w>h:q<cr>
 
-" Map Keys
-" :imap ii <Esc>
+
 :vmap <C-C> "+y
 :vmap <C-V> "+p
 
 "Fzf
 nnoremap <silent> ;f <cmd>:Files<cr>
-" nnoremap <silent> ;r <cmd>Telescope live_grep<cr>
-" nnoremap <silent> \\ <cmd>Telescope buffers<cr>
-" nnoremap <silent> ;; <cmd>Telescope help_tags<cr>
 
-" Scheme Configuration
+" Scheme configuration
 set background=dark
 let g:gruvbox_italic=1
 let g:gruvbox_contrast_dark = "hard"
 colorscheme gruvbox
 
-nmap <Leader>vf <Plug>VimwikiVSplitLink
+
+"Vimwiki
 nmap <Leader>vs :vs \| :VimwikiIndex<CR>
+nmap <Leader><space> :VimwikiGoBackLink<CR>
 let g:vimwiki_list = [{'path': '~/Dropbox/notes',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
 
@@ -133,6 +128,8 @@ let g:vimwiki_list = [{'path': '~/Dropbox/notes',
 autocmd FileType nerdtree setlocal relativenumber
 let NERDTreeQuitOnOpen=1
 let NERDTreeShowLineNumbers=1
+noremap <leader>fs :NERDTreeFind<cr>
+noremap <leader>fo :NERDTree<cr>
 
 " Airline
 "let g:airline#extensions#tabline#enabled = 1
@@ -144,6 +141,7 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+noremap <leader>gs :CocSearch
 
 "Vimspector
 " let g:vimspector_enable_mappings = 'HUMAN'
