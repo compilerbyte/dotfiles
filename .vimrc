@@ -80,6 +80,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
+Plug 'alvan/vim-closetag'
 Plug 'vim-airline/vim-airline'
 " Plug 'Yggdroot/indentLine'
 " Plug 'nvim-lua/plenary.nvim'
@@ -88,7 +89,6 @@ Plug 'vimwiki/vimwiki'
 " Plug 'davidhalter/jedi-vim'
 
 call plug#end()
-
 " Leader Keys -  Automatically save and load folds
 let mapleader = ","
 noremap <leader>w :w<cr>
@@ -98,13 +98,14 @@ noremap <leader>fq :q!<cr>
 noremap <C-p> :GFiles<CR>
 "Others
 noremap <leader>fm :Autoformat<CR>
+" Buffer
 noremap <leader>bp :bp<cr>
 noremap <leader>bo :bn<cr>
 noremap <leader>bd :bd<cr>
 "Easymotion
 nmap <leader>s <Plug>(easymotion-s2)
 
-
+"Clipboard
 :vmap <C-C> "+y
 :vmap <C-V> "+p
 
