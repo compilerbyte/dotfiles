@@ -83,6 +83,7 @@ Some programs for use
 - [obs](https://github.com/obsproject/obs-studio) - Free and open source software for live streaming and screen recording- 
 - [peek](https://github.com/phw/peek) - Simple animated GIF screen recorder with an easy to use interface. 
 - [kdenlive](https://github.com/KDE/kdenlive) - Free and open source video editor.
+- [asciinema](https://asciinema.org/) - Record and share your terminal sessions, the simple way.
 - [gimp](https://github.com/GNOME/gimp) - Open souce image editor 
 - [pinta](https://github.com/PintaProject/Pinta) - Simple GTK Paint Program
 - [screenkey](https://github.com/wavexx/screenkey) - A screencast tool to display your keys inspired by Screenflick

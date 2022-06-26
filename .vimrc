@@ -82,11 +82,20 @@ Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
 Plug 'vim-airline/vim-airline'
-" Plug 'Yggdroot/indentLine'
+Plug 'Yggdroot/indentLine'
+Plug 'puremourning/vimspector'
 " Plug 'nvim-lua/plenary.nvim'
 " Plug 'nvim-telescope/telescope.nvim'
 Plug 'vimwiki/vimwiki'
 " Plug 'davidhalter/jedi-vim'
+
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+" let g:indentLine_setConceal = 0
+" let g:indentLine_enabled = 1
+autocmd Filetype json let g:indentLine_setConceal = 0
+let g:indentLine_bufNameExclude = ['_.*', 'NERD_tree.*', '*.wiki']
+let g:indentLine_fileTypeExclude = ['vimwiki']
+let g:indentLine_bufTypeExclude = ['help', 'terminal', 'vimwiki']
 
 call plug#end()
 " Leader Keys -  Automatically save and load folds
@@ -110,8 +119,9 @@ nmap <leader>s <Plug>(easymotion-s2)
 :vmap <C-V> "+p
 
 "Fzf
-nnoremap <silent> ;f <cmd>:Files<cr>
-
+" nnoremap <silent> ;f <cmd>:Files<cr>
+nnoremap <silent> ;f <cmd>:Files %:p:h<cr>
+nnoremap <silent> ;r <cmd>:lcd%:p:h <bar>:Rg <cr>
 " Scheme configuration
 set background=dark
 let g:gruvbox_italic=1
@@ -124,7 +134,7 @@ nmap <Leader>vs :vs \| :VimwikiIndex<CR>
 nmap <Leader><space> :VimwikiGoBackLink<CR>
 let g:vimwiki_list = [{'path': '~/Dropbox/notes',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
-
+noremap <leader>sw :VWS 
 " NerdTree
 autocmd FileType nerdtree setlocal relativenumber
 let NERDTreeQuitOnOpen=1
@@ -137,12 +147,12 @@ noremap <leader>fo :NERDTree<cr>
 let g:airline_powerline_fonts = 1
 
 " Coc
-let g:coc_global_extensions = [ 'coc-tsserver','coc-python','coc-emmet','coc-html','coc-css','coc-json','coc-git', 'coc-phpls']
+let g:coc_global_extensions = [ 'coc-tsserver','coc-jedi','coc-emmet','coc-html','coc-css','coc-json','coc-git', 'coc-phpls']
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
-noremap <leader>gs :CocSearch
+noremap <leader>gs :CocSearch 
 
 "Vimspector
 " let g:vimspector_enable_mappings = 'HUMAN'
