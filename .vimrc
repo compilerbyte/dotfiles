@@ -132,9 +132,19 @@ colorscheme gruvbox
 "Vimwiki
 nmap <Leader>vs :vs \| :VimwikiIndex<CR>
 nmap <Leader><space> :VimwikiGoBackLink<CR>
+" let g:vimwiki_list = [{'path': '~/Dropbox/notes'}]
+                      
 let g:vimwiki_list = [{'path': '~/Dropbox/notes',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_global_ext = 0
+"fix: use vimwiki filetype only for vimwiki files 
+let private_wiki = {}
+let private_wiki.path = '~/Dropbox/notes'
+let private_wiki.syntax = 'markdown'
 noremap <leader>sw :VWS 
+"Change filetype based on directory path
+autocmd BufRead,BufNewFile ~/Dropbox/notes/* set syntax=vimwiki
+
 " NerdTree
 autocmd FileType nerdtree setlocal relativenumber
 let NERDTreeQuitOnOpen=1
@@ -155,8 +165,9 @@ nmap <silent> gr <Plug>(coc-references)
 noremap <leader>gs :CocSearch 
 
 "Vimspector
-" let g:vimspector_enable_mappings = 'HUMAN'
-
+let g:vimspector_enable_mappings = 'HUMAN'
+" packadd! vimspector
+nmap <Leader>di <Plug>VimspectorBalloonEval
 
 vmap <leader>gf  <Plug>(coc-format-selected)
 nmap <leader>gf  <Plug>(coc-format-selected)
