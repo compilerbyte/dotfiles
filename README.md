@@ -59,6 +59,7 @@ Some programs for use
 - [gnome-todo](https://gitlab.gnome.org/GNOME/gnome-todo) - a personal task manager made to perfectly fit the GNOME desktop
 - [gnome-clocks](https://gitlab.gnome.org/GNOME/gnome-clocks) - a simple application to show the time and date in multiple locations and set alarms or timer
 - [gnome-pomodoro](https://github.com/gnome-pomodoro/gnome-pomodoro) - A time management utility for GNOME based on the pomodoro technique!
+- [gnome-terminal](https://archlinux.org/packages/extra/x86_64/gnome-terminal/) - The GNOME Terminal Emulator
 - [notes](https://github.com/pimterry/notes) - Simple delightful note taking, with more unix and less lock-in.
 - [dijo](https://github.com/nerdypepper/dijo) - scriptable, curses-based, digital habit tracker
 - [geogebra](https://geogebra.org/) - an interactive geometry, algebra, statistics and calculus application, intended for learning and teaching mathematics
@@ -69,6 +70,8 @@ Some programs for use
 - [dropbox](https://dropbox.com) - file hosting service 
 - [thunderbird](https://www.thunderbird.net/) - free and open-source cross-platform email client
 - [ghostwriter](https://wereturtle.github.io/ghostwriter/) - Markdown Writer 
+- [pcmanfm](https://github.com/lxde/pcmanfm) - Extremely fast and lightweight file manager
+- [xarchiver](https://archlinux.org/packages/community/x86_64/xarchiver/) - frontend to various command line archivers
 - Programming
 - [staruml](https://staruml.io/) - a sophisticated software modeler aimed to support agile and concise modeling
 - [sqlitestudio](https://sqlitestudio.pl/) - Create, edit, browse SQLite databases.
