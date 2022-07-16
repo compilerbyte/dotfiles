@@ -72,6 +72,7 @@ Some programs for use
 - [ghostwriter](https://wereturtle.github.io/ghostwriter/) - Markdown Writer 
 - [pcmanfm](https://github.com/lxde/pcmanfm) - Extremely fast and lightweight file manager
 - [xarchiver](https://archlinux.org/packages/community/x86_64/xarchiver/) - frontend to various command line archivers
+- [CutyCapt](https://github.com/amw/CutyCapt) - capture Webkit's rendering of a web page, and save that rendering as either SVG, PDF, PS, PNG, JPEG, TIFF, GIF, or BMP files
 - Programming
 - [staruml](https://staruml.io/) - a sophisticated software modeler aimed to support agile and concise modeling
 - [sqlitestudio](https://sqlitestudio.pl/) - Create, edit, browse SQLite databases.

@@ -42,7 +42,8 @@ floating_modifier $mod
 
 # start a terminal
 # bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec gnome-terminal
+# bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Return exec xterm
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -197,10 +198,15 @@ bar {
 		urgent_workspace   #2f343a #900000 #ffffff
 	}
 }
+
+##################################################################################
 #MyConfig
-#
-#
-#
+##################################################################################
+
+
+#Switch workspace
+bindsym $mod+p workspace next
+bindsym $mod+o workspace prev
 #Focused Window
 client.focused #ffe57 #bf7500 #ffe57
 
@@ -211,12 +217,20 @@ bindsym Control+Shift+F7 exec brightnessctl s +20%
 #Lock Screen
 bindsym Control+Mod1+l exec "i3lock -c 000000"
 
-#Run Nautilus
-bindsym $mod+n exec nautilus
+#Suspend PC
+bindsym Shift+Mod1+l exec "systemctl suspend"
 
-#Take Screenshot
+#Run Nautilus
+# bindsym $mod+n exec nautilus
+bindsym $mod+n exec pcmanfm
+
+##Take Screenshot
 bindsym Print exec gnome-screenshot
 bindsym Shift+Print exec gnome-screenshot -a
+
+# bindsym Print exec scrot
+# bindsym Shift+Print exec  scrot --select 
+
 
 #Notify Low Battery
 exec --no-startup-id i3-battery-popup -L 15 -t 1m
@@ -235,7 +249,7 @@ for_window [class="^.*"] border pixel 3
 exec picom -b -f --no-vsync
 
 #Keyboard Language Default
-exec setxkbmap latam
+exec --no-startup-id setxkbmap "latam"
 
 #Switch KeyBoard Language
 bindsym $mod+Shift+z exec setxkbmap latam
@@ -246,13 +260,16 @@ bindsym $mod+z exec setxkbmap us
 exec feh --bg-fill $HOME/.config/i3/wallpapers/wallpaper.jpg
 
 #Script Switch Monitor 
-bindsym $mod+p exec $HOME/.config/i3/scripts/display.sh
+bindsym Shift+$mod+p exec $HOME/.config/i3/scripts/display.sh
 
 #Open Directory
-bindsym $mod+Shift+Return exec gnome-terminal --working-directory="`xcwd`"
+# bindsym $mod+Shift+Return exec gnome-terminal --working-directory="`xcwd`"
+bindsym $mod+Shift+Return exec cd "$(xcwd)" && exec xterm
 
 #set monitor workspace 
-workspace $ws9 output VGA-0 
+workspace $ws1 output VGA-0 
+workspace $ws2 output VGA-0 
+workspace $ws10 output eDP
 
 #move container to the next output
 bindsym $mod+Shift+x move container to output next

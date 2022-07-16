@@ -1,4 +1,5 @@
 "set nocompatible
+set term=xterm
 set rnu
 set ruler " Show the cursor position
 set cursorline
@@ -6,6 +7,8 @@ set showmatch
 set clipboard=unnamed
 set mouse=a
 set sw=2
+" set list          " Display unprintable characters f12 - switches
+" set listchars=tab:•\ ,trail:•,extends:»,precedes:« " Unprintable chars mapping
 set noshowmode " Don't show the current mode (airline.vim takes care of us)
 set numberwidth=2
 " Helps force plug-ins to load correctly when it is turned back on below.
@@ -84,9 +87,11 @@ Plug 'alvan/vim-closetag'
 Plug 'vim-airline/vim-airline'
 Plug 'Yggdroot/indentLine'
 Plug 'puremourning/vimspector'
-" Plug 'nvim-lua/plenary.nvim'
+Plug 'liuchengxu/vista.vim'
+Plug 'nvim-lua/plenary.nvim'
 " Plug 'nvim-telescope/telescope.nvim'
 Plug 'vimwiki/vimwiki'
+" Plug 'tbabej/taskwiki'
 " Plug 'davidhalter/jedi-vim'
 
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
@@ -152,9 +157,13 @@ let NERDTreeShowLineNumbers=1
 noremap <leader>fs :NERDTreeFind<cr>
 noremap <leader>fo :NERDTree<cr>
 
+" Vista
+nnoremap <silent> ;v <cmd>:Vista <cr>
+
 " Airline
 "let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
+let g:airline#extensions#whitespace#enabled = 0
 
 " Coc
 let g:coc_global_extensions = [ 'coc-tsserver','coc-jedi','coc-emmet','coc-html','coc-css','coc-json','coc-git', 'coc-phpls']
