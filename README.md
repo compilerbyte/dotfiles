@@ -50,7 +50,8 @@ Some programs for use
 - [pavucontol](https://freedesktop.org/software/pulseaudio/pavucontrol/) - PulseAudio Volume Control (pavucontrol) is a simple GTK based volume control tool ("mixer") for the PulseAudio sound server
 - [qbittorrent](https://www.qbittorrent.org/) - a cross-platform free and open-source BitTorrent client.
 - [balena-etcher](https://www.balena.io/etcher/) - Flash OS images to SD cards & USB drives
-- [ventoy](https://) - Ventoy is an open source tool to create bootable USB drive for ISO/WIM/IMG/VHD(x)/EFI file
+- [ventoy](https://www.ventoy.net/en/index.html) - Ventoy is an open source tool to create bootable USB drive for ISO/WIM/IMG/VHD(x)/EFI file
+- [clonezilla](https://clonezilla.org/) - A partition and disk imaging/cloning program which helps with system deployment, bare metal backup and recovery
 - [ncdu](https://dev.yorhel.nl/ncdu) -  a disk usage analyzer with an ncurses interface
 - [freetube](https://github.com/FreeTubeApp/FreeTube) - an open source desktop YouTube player built with privacy in mind.
 - [drawio](https://app.diagrams.net/) - Flowchart Maker & Online Diagram Software
