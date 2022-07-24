@@ -1,12 +1,13 @@
-"set nocompatible
-set term=xterm
+set nocompatible
 set rnu
 set ruler " Show the cursor position
 set cursorline
 set showmatch
-set clipboard=unnamed
+set clipboard=unnamedplus
 set mouse=a
 set sw=2
+set path+=**
+set wildmenu
 " set list          " Display unprintable characters f12 - switches
 " set listchars=tab:•\ ,trail:•,extends:»,precedes:« " Unprintable chars mapping
 set noshowmode " Don't show the current mode (airline.vim takes care of us)
@@ -39,9 +40,10 @@ set wildignore+=**/.git/*
 set guifont=DroidSansMono\ Nerd\ Font\ 11
 
 " Options, Colors, Fonts, and Syntax
-filetype plugin indent on
+" filetype plugin indent on
+filetype plugin on
+filetype indent on
 syntax enable
-syntax on
 
 " Create Folder Plugins
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -67,6 +69,7 @@ endif
 "Plugins
 call plug#begin('~/.vim/plugged')
 Plug 'pangloss/vim-javascript'    " JavaScript support
+Plug 'vim-python/python-syntax'
 " Plug 'leafgarland/typescript-vim' " TypeScript syntax
 Plug 'ryanoasis/vim-devicons'
 " Plug 'ThePrimeagen/vim-be-good'
@@ -89,10 +92,15 @@ Plug 'Yggdroot/indentLine'
 Plug 'puremourning/vimspector'
 Plug 'liuchengxu/vista.vim'
 Plug 'nvim-lua/plenary.nvim'
+Plug 'preservim/nerdcommenter'
+Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 " Plug 'nvim-telescope/telescope.nvim'
 Plug 'vimwiki/vimwiki'
 " Plug 'tbabej/taskwiki'
 " Plug 'davidhalter/jedi-vim'
+
+"Plug python
+let g:python_highlight_all = 1
 
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 " let g:indentLine_setConceal = 0
@@ -124,9 +132,13 @@ nmap <leader>s <Plug>(easymotion-s2)
 :vmap <C-V> "+p
 
 "Fzf
+nnoremap <silent> ;f <cmd>:Glcd <bar>:Files <cr>
 " nnoremap <silent> ;f <cmd>:Files<cr>
-nnoremap <silent> ;f <cmd>:Files %:p:h<cr>
-nnoremap <silent> ;r <cmd>:lcd%:p:h <bar>:Rg <cr>
+nnoremap <silent> ;a <cmd>:Files %:p:h<cr>
+" nnoremap <silent> ;r <cmd>:Rg <cr>
+nnoremap <silent> ;r <cmd>:Glcd <bar>:Rg <cr>
+nnoremap <silent> ;s <cmd>:lcd%:p:h <bar>:Rg <cr>
+
 " Scheme configuration
 set background=dark
 let g:gruvbox_italic=1
@@ -160,6 +172,11 @@ noremap <leader>fo :NERDTree<cr>
 " Vista
 nnoremap <silent> ;v <cmd>:Vista <cr>
 
+"Instant Markdown
+let g:instant_markdown_autostart = 0
+let g:instant_markdown_port = 8888
+
+
 " Airline
 "let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 0
@@ -190,3 +207,18 @@ autocmd BufEnter *.c map <F2> :w <CR> :!gcc % -o %< && ./%< <CR>
 
 "Node Settings
 autocmd FileType javascript map <buffer> <F2> :w<CR>:exec '! node' shellescape(@%, 1)<CR>
+
+"Markdown Settings
+autocmd FileType markdown map <buffer> <F2> :w<CR>:InstantMarkdownPreview<CR>
+
+"Snippets
+nnoremap ,html :-1read $HOME/.vim/.skeleton.html<CR>5jwf>a
+
+
+#Netrw
+let g:netrw_banner=0        " disable annoying banner
+let g:netrw_browse_split=4  " open in prior window
+let g:netrw_altv=1          " open splits to the right
+let g:netrw_liststyle=3     " tree view
+let g:netrw_list_hide=netrw_gitignore#Hide()
+let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'

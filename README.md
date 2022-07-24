@@ -40,7 +40,6 @@ Repository containing my configuration files.
     - [Dark Planet](https://www.pling.com/p/1163924/) - Wallpaper.
 ---
 ## List of programs 
-Some programs for use 
 
 - [coinomi](https://www.coinomi.com/) - Coinomi desktop wallet. Securely store, manage and exchange Bitcoin, Ethereum, and more than 500 other blockchain assets
 - [electrum](https://electrum.org/) - Lightweight Bitcoin wallet 
@@ -74,14 +73,14 @@ Some programs for use
 - [pcmanfm](https://github.com/lxde/pcmanfm) - Extremely fast and lightweight file manager
 - [xarchiver](https://archlinux.org/packages/community/x86_64/xarchiver/) - frontend to various command line archivers
 - [CutyCapt](https://github.com/amw/CutyCapt) - capture Webkit's rendering of a web page, and save that rendering as either SVG, PDF, PS, PNG, JPEG, TIFF, GIF, or BMP files
-- Programming
+### Programming
 - [staruml](https://staruml.io/) - a sophisticated software modeler aimed to support agile and concise modeling
 - [sqlitestudio](https://sqlitestudio.pl/) - Create, edit, browse SQLite databases.
 - [mysql-workbench](https://www.mysql.com/products/workbench/) - a visual database design tool that integrates SQL development, administration, database design, creation and maintenance into a single integrated development environment for the MySQL 
 - [docker](https://www.docker.com/) - a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers.
 - [docker-compose](https://docs.docker.com/compose/install/) - Compose is a tool for defining and running multi-container Docker applications.
 - [virtualbox](https://www.virtualbox.org/) - cross-platform virtualization software.
-- - Presentation and content creation
+### Presentation and content creation
 - [rclone](https://github.com/rclone/rclone) - is a command-line program to sync files and directories to and from different cloud storage providers.
 - [uxplay](https://github.com/antimof/UxPlay) - dAirPlay Unix mirroring server
 - [phonepresenter](https://phonepresenter.github.io/) - Control presentations from your smartphone
