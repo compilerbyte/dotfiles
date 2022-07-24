@@ -215,7 +215,7 @@ autocmd FileType markdown map <buffer> <F2> :w<CR>:InstantMarkdownPreview<CR>
 nnoremap ,html :-1read $HOME/.vim/.skeleton.html<CR>5jwf>a
 
 
-#Netrw
+" Netrw
 let g:netrw_banner=0        " disable annoying banner
 let g:netrw_browse_split=4  " open in prior window
 let g:netrw_altv=1          " open splits to the right
