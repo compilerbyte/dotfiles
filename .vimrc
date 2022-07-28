@@ -70,6 +70,7 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'pangloss/vim-javascript'    " JavaScript support
 Plug 'vim-python/python-syntax'
+Plug 'evanleck/vim-svelte', {'branch': 'main'}
 " Plug 'leafgarland/typescript-vim' " TypeScript syntax
 Plug 'ryanoasis/vim-devicons'
 " Plug 'ThePrimeagen/vim-be-good'
@@ -132,12 +133,12 @@ nmap <leader>s <Plug>(easymotion-s2)
 :vmap <C-V> "+p
 
 "Fzf
-nnoremap <silent> ;f <cmd>:Glcd <bar>:Files <cr>
+" nnoremap <silent> ;f <cmd>:Glcd <bar>:Files <cr>
 " nnoremap <silent> ;f <cmd>:Files<cr>
-nnoremap <silent> ;a <cmd>:Files %:p:h<cr>
+nnoremap <silent> ;f <cmd>:Files %:p:h<cr>
 " nnoremap <silent> ;r <cmd>:Rg <cr>
-nnoremap <silent> ;r <cmd>:Glcd <bar>:Rg <cr>
-nnoremap <silent> ;s <cmd>:lcd%:p:h <bar>:Rg <cr>
+" nnoremap <silent> ;r <cmd>:Glcd <bar>:Rg <cr>
+nnoremap <silent> ;r <cmd>:lcd%:p:h <bar>:Rg <cr>
 
 " Scheme configuration
 set background=dark
