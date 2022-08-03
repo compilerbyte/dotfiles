@@ -3,7 +3,7 @@ set rnu
 set ruler " Show the cursor position
 set cursorline
 set showmatch
-set clipboard=unnamedplus
+set clipboard=unnamed
 set mouse=a
 set sw=2
 set path+=**
@@ -37,6 +37,7 @@ set wildignore+=**/android/*
 set wildignore+=**/ios/*
 set wildignore+=**/.git/*
 
+" Set font
 set guifont=DroidSansMono\ Nerd\ Font\ 11
 
 " Options, Colors, Fonts, and Syntax
@@ -73,11 +74,9 @@ Plug 'vim-python/python-syntax'
 Plug 'evanleck/vim-svelte', {'branch': 'main'}
 " Plug 'leafgarland/typescript-vim' " TypeScript syntax
 Plug 'ryanoasis/vim-devicons'
-" Plug 'ThePrimeagen/vim-be-good'
-" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Plug 'vim-airline/vim-airline'
 Plug 'mattn/emmet-vim'
 Plug 'preservim/nerdtree'
 Plug 'christoomey/vim-tmux-navigator'
@@ -92,13 +91,17 @@ Plug 'vim-airline/vim-airline'
 Plug 'Yggdroot/indentLine'
 Plug 'puremourning/vimspector'
 Plug 'liuchengxu/vista.vim'
-Plug 'nvim-lua/plenary.nvim'
 Plug 'preservim/nerdcommenter'
-Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
-" Plug 'nvim-telescope/telescope.nvim'
 Plug 'vimwiki/vimwiki'
+Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
+" Plug 'nvim-lua/plenary.nvim'
+" Plug 'preservim/vim-markdown'
+" Plug 'vim-airline/vim-airline'
+" Plug 'nvim-telescope/telescope.nvim'
 " Plug 'tbabej/taskwiki'
-" Plug 'davidhalter/jedi-vim'
+Plug 'davidhalter/jedi-vim'
+Plug 'lepture/vim-jinja'
+Plug 'honza/vim-snippets'
 
 "Plug python
 let g:python_highlight_all = 1
@@ -159,9 +162,11 @@ let g:vimwiki_global_ext = 0
 let private_wiki = {}
 let private_wiki.path = '~/Dropbox/notes'
 let private_wiki.syntax = 'markdown'
-noremap <leader>sw :VWS 
-"Change filetype based on directory path
-autocmd BufRead,BufNewFile ~/Dropbox/notes/* set syntax=vimwiki
+
+" noremap <leader>sw :VWS 
+
+" Change filetype based on directory path
+ autocmd BufRead,BufNewFile ~/Dropbox/notes/* set syntax=vimwiki
 
 " NerdTree
 autocmd FileType nerdtree setlocal relativenumber
@@ -180,11 +185,11 @@ let g:instant_markdown_port = 8888
 
 " Airline
 "let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 0
+let g:airline_powerline_fonts = 1
 let g:airline#extensions#whitespace#enabled = 0
 
 " Coc
-let g:coc_global_extensions = [ 'coc-tsserver','coc-jedi','coc-emmet','coc-html','coc-css','coc-json','coc-git', 'coc-phpls']
+let g:coc_global_extensions = [ 'coc-tsserver', 'coc-emmet', 'coc-html', 'coc-css', 'coc-json', 'coc-git', 'coc-phpls']
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
@@ -197,7 +202,6 @@ let g:vimspector_enable_mappings = 'HUMAN'
 nmap <Leader>di <Plug>VimspectorBalloonEval
 
 vmap <leader>gf  <Plug>(coc-format-selected)
-nmap <leader>gf  <Plug>(coc-format-selected)
 
 
 "Python Settings
