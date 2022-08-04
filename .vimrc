@@ -102,6 +102,7 @@ Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn in
 Plug 'davidhalter/jedi-vim'
 Plug 'lepture/vim-jinja'
 Plug 'honza/vim-snippets'
+Plug 'nikvdp/ejs-syntax'
 
 "Plug python
 let g:python_highlight_all = 1
@@ -137,9 +138,9 @@ nmap <leader>s <Plug>(easymotion-s2)
 
 "Fzf
 " nnoremap <silent> ;f <cmd>:Glcd <bar>:Files <cr>
-" nnoremap <silent> ;f <cmd>:Files<cr>
+nnoremap <leader>f <cmd>:Files<cr>
 nnoremap <silent> ;f <cmd>:Files %:p:h<cr>
-" nnoremap <silent> ;r <cmd>:Rg <cr>
+nnoremap <leader>r <cmd>:Rg <cr>
 " nnoremap <silent> ;r <cmd>:Glcd <bar>:Rg <cr>
 nnoremap <silent> ;r <cmd>:lcd%:p:h <bar>:Rg <cr>
 
@@ -216,8 +217,11 @@ autocmd FileType javascript map <buffer> <F2> :w<CR>:exec '! node' shellescape(@
 "Markdown Settings
 autocmd FileType markdown map <buffer> <F2> :w<CR>:InstantMarkdownPreview<CR>
 
+"Jinja Settings
+" au BufNewFile,BufRead *.html,*.htm,*.shtml,*.stm set ft=jinja
+
 "Snippets
-nnoremap ,html :-1read $HOME/.vim/.skeleton.html<CR>5jwf>a
+" nnoremap ,html :-1read $HOME/.vim/.skeleton.html<CR>5jwf>a
 
 
 " Netrw
