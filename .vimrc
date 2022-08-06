@@ -1,9 +1,13 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                    MAIN CONFIGURATION                                     "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 set nocompatible
 set rnu
 set ruler " Show the cursor position
 set cursorline
 set showmatch
-set clipboard=unnamed
+set clipboard=unnamedplus
 set mouse=a
 set sw=2
 set path+=**
@@ -40,18 +44,79 @@ set wildignore+=**/.git/*
 " Set font
 set guifont=DroidSansMono\ Nerd\ Font\ 11
 
+" Real programmers don't use TABs but spaces
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set shiftround
+set expandtab
+
+
+" Make search case insensitive
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+
+" Useful settings
+set history=700
+set undolevels=700
+
 " Options, Colors, Fonts, and Syntax
-" filetype plugin indent on
-filetype plugin on
-filetype indent on
+filetype plugin indent on
 syntax enable
 
-" Create Folder Plugins
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                  KEYMAP CONFIGURATION                                       "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Leader Keys -  Automatically save and load folds
+let mapleader = ","
+
+" Save, quit and force quit
+noremap <leader>w :w<cr>
+noremap <leader>eq :q<cr>
+noremap <leader>fq :q!<cr>
+"Git
+noremap <C-p> :GFiles<CR>
+" Autofomrat
+noremap <leader>fm :Autoformat<CR>
+" Buffer
+noremap <leader>bl :ls<cr>
+noremap <leader>bp :bp<cr>
+noremap <leader>bo :bn<cr>
+noremap <leader>bd :bd<cr>
+
+"Clipboard
+:vmap <C-C> "+y
+:vmap <C-V> "+p
+
+"Fzf
+" nnoremap <silent> ;f <cmd>:Glcd <bar>:Files <cr>
+nnoremap <leader>f <cmd>:Files<cr>
+nnoremap <silent> ;f <cmd>:Files %:p:h<cr>
+nnoremap <leader>r <cmd>:Rg <cr>
+" nnoremap <silent> ;r <cmd>:Glcd <bar>:Rg <cr>
+nnoremap <silent> ;r <cmd>:lcd%:p:h <bar>:Rg <cr>
+
+
+" easier moving between tabs
+map <Leader>n <esc>:tabprevious<CR>
+map <Leader>m <esc>:tabnext<CR>
+
+" Removes highlight of your last search
+" ``<C>`` stands for ``CTRL`` and therefore ``<C-n>`` stands for ``CTRL+n``
+noremap <C-n> :nohl<CR>
+vnoremap <C-n> :nohl<CR>
+inoremap <C-n> :nohl<CR>
+
+
+" easier moving of code blocks
+" Try to go into visual mode (v), thenselect several lines of code here and
+" then press ``>`` several times.
+vnoremap < <gv  " better indentation
+vnoremap > >gv  " better indentation
 
 " termguicolors
 if (empty($TMUX))
@@ -67,10 +132,27 @@ if (empty($TMUX))
   endif
 endif
 
-"Plugins
+" Automatic reloading of .vimrc
+autocmd! bufwritepost .vimrc source %
+
+" set foldmethod=indent
+nnoremap <space> za
+vnoremap <space> %zf 
+vnoremap <leader><space> zf 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                  PLUGINS                                   "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Create Folder Plugins
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 call plug#begin('~/.vim/plugged')
+
 Plug 'pangloss/vim-javascript'    " JavaScript support
-Plug 'vim-python/python-syntax'
 Plug 'evanleck/vim-svelte', {'branch': 'main'}
 " Plug 'leafgarland/typescript-vim' " TypeScript syntax
 Plug 'ryanoasis/vim-devicons'
@@ -99,57 +181,44 @@ Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn in
 " Plug 'vim-airline/vim-airline'
 " Plug 'nvim-telescope/telescope.nvim'
 " Plug 'tbabej/taskwiki'
+Plug 'vim-python/python-syntax'
 Plug 'davidhalter/jedi-vim'
 Plug 'lepture/vim-jinja'
 Plug 'honza/vim-snippets'
 Plug 'nikvdp/ejs-syntax'
 
-"Plug python
-let g:python_highlight_all = 1
-
-let g:indentLine_char_list = ['|', '¦', '┆', '┊']
-" let g:indentLine_setConceal = 0
-" let g:indentLine_enabled = 1
-autocmd Filetype json let g:indentLine_setConceal = 0
-let g:indentLine_bufNameExclude = ['_.*', 'NERD_tree.*', '*.wiki']
-let g:indentLine_fileTypeExclude = ['vimwiki']
-let g:indentLine_bufTypeExclude = ['help', 'terminal', 'vimwiki']
-
 call plug#end()
-" Leader Keys -  Automatically save and load folds
-let mapleader = ","
-noremap <leader>w :w<cr>
-noremap <leader>eq :q<cr>
-noremap <leader>fq :q!<cr>
-"Git
-noremap <C-p> :GFiles<CR>
-"Others
-noremap <leader>fm :Autoformat<CR>
-" Buffer
-noremap <leader>bp :bp<cr>
-noremap <leader>bo :bn<cr>
-noremap <leader>bd :bd<cr>
-"Easymotion
-nmap <leader>s <Plug>(easymotion-s2)
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                 PLUGIN CONFIGURATION  	  	     "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"Clipboard
-:vmap <C-C> "+y
-:vmap <C-V> "+p
+" Show whitespace
+" MUST be inserted BEFORE the colorscheme command
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+au InsertLeave * match ExtraWhitespace /\s\+$/
 
-"Fzf
-" nnoremap <silent> ;f <cmd>:Glcd <bar>:Files <cr>
-nnoremap <leader>f <cmd>:Files<cr>
-nnoremap <silent> ;f <cmd>:Files %:p:h<cr>
-nnoremap <leader>r <cmd>:Rg <cr>
-" nnoremap <silent> ;r <cmd>:Glcd <bar>:Rg <cr>
-nnoremap <silent> ;r <cmd>:lcd%:p:h <bar>:Rg <cr>
-
-" Scheme configuration
+" colorscheme gruvbox 
 set background=dark
 let g:gruvbox_italic=1
 let g:gruvbox_contrast_dark = "hard"
 colorscheme gruvbox
 
+" python-syntax
+let g:python_highlight_all = 1
+let g:python_slow_sync = 0
+
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+" let g:indentLine_setConceal = 0
+" let g:indentLine_enabled = 1
+autocmd Filetype json let g:indentLine_setConceal = 0
+
+"vimwiki
+let g:indentLine_bufNameExclude = ['_.*', 'NERD_tree.*', '*.wiki']
+let g:indentLine_fileTypeExclude = ['vimwiki']
+let g:indentLine_bufTypeExclude = ['help', 'terminal', 'vimwiki']
+
+"Easymotion
+nmap <leader>s <Plug>(easymotion-s2)
 
 "Vimwiki
 nmap <Leader>vs :vs \| :VimwikiIndex<CR>
@@ -164,7 +233,7 @@ let private_wiki = {}
 let private_wiki.path = '~/Dropbox/notes'
 let private_wiki.syntax = 'markdown'
 
-" noremap <leader>sw :VWS 
+" noremap <leader>sw :VWS -- i don't remember what is this
 
 " Change filetype based on directory path
  autocmd BufRead,BufNewFile ~/Dropbox/notes/* set syntax=vimwiki
@@ -185,16 +254,17 @@ let g:instant_markdown_port = 8888
 
 
 " Airline
-"let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#whitespace#enabled = 0
 
 " Coc
-let g:coc_global_extensions = [ 'coc-tsserver', 'coc-emmet', 'coc-html', 'coc-css', 'coc-json', 'coc-git', 'coc-phpls']
+let g:coc_global_extensions = [ 'coc-python', 'coc-tsserver', 'coc-emmet', 'coc-html', 'coc-css', 'coc-json', 'coc-git', 'coc-phpls', 'coc-snippets']
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+vmap <leader>gf  <Plug>(coc-format-selected)
 noremap <leader>gs :CocSearch 
 
 "Vimspector
@@ -202,25 +272,27 @@ let g:vimspector_enable_mappings = 'HUMAN'
 " packadd! vimspector
 nmap <Leader>di <Plug>VimspectorBalloonEval
 
-vmap <leader>gf  <Plug>(coc-format-selected)
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                 EXEC FILES                                   "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"Python Settings
+"Python run
 autocmd FileType python map <buffer> <F2> :w<CR>:exec '! python' shellescape(@%, 1)<CR>
 
-"C Settings
+"C run
 autocmd BufEnter *.c map <F2> :w <CR> :!gcc % -o %< && ./%< <CR>
 
-"Node Settings
+" Node run
 autocmd FileType javascript map <buffer> <F2> :w<CR>:exec '! node' shellescape(@%, 1)<CR>
 
-"Markdown Settings
+" Markdown run
 autocmd FileType markdown map <buffer> <F2> :w<CR>:InstantMarkdownPreview<CR>
 
-"Jinja Settings
+" Jinja filetype
 " au BufNewFile,BufRead *.html,*.htm,*.shtml,*.stm set ft=jinja
 
-"Snippets
+" @Deprecated Snippets
 " nnoremap ,html :-1read $HOME/.vim/.skeleton.html<CR>5jwf>a
 
 
@@ -231,3 +303,12 @@ let g:netrw_altv=1          " open splits to the right
 let g:netrw_liststyle=3     " tree view
 let g:netrw_list_hide=netrw_gitignore#Hide()
 let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                   TESTING                                   "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+
