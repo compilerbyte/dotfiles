@@ -42,7 +42,7 @@ set wildignore+=**/ios/*
 set wildignore+=**/.git/*
 
 " Set font
-set guifont=DroidSansMono\ Nerd\ Font\ 11
+set guifont=Hack\ Nerd\ Font\ 9
 
 " Real programmers don't use TABs but spaces
 set tabstop=4
@@ -78,8 +78,14 @@ let mapleader = ","
 noremap <leader>w :w<cr>
 noremap <leader>eq :q<cr>
 noremap <leader>fq :q!<cr>
+
 "Git
-noremap <C-p> :GFiles<CR>
+" noremap <C-p> :GFiles<CR>
+
+" Buffers
+" CTRL - V for open all buffers on vertical in same screen
+noremap <C-p> :Buffers<CR>
+
 " Autofomrat
 noremap <leader>fm :Autoformat<CR>
 " Buffer
@@ -107,9 +113,9 @@ map <Leader>m <esc>:tabnext<CR>
 
 " Removes highlight of your last search
 " ``<C>`` stands for ``CTRL`` and therefore ``<C-n>`` stands for ``CTRL+n``
-noremap <C-n> :nohl<CR>
-vnoremap <C-n> :nohl<CR>
-inoremap <C-n> :nohl<CR>
+noremap <C-b> :nohl<CR>
+vnoremap <C-b> :nohl<CR>
+inoremap <C-b> :nohl<CR>
 
 
 " easier moving of code blocks
@@ -186,6 +192,8 @@ Plug 'davidhalter/jedi-vim'
 Plug 'lepture/vim-jinja'
 Plug 'honza/vim-snippets'
 Plug 'nikvdp/ejs-syntax'
+" Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
+" Plug 'altercation/vim-colors-solarized'
 
 call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -202,6 +210,11 @@ set background=dark
 let g:gruvbox_italic=1
 let g:gruvbox_contrast_dark = "hard"
 colorscheme gruvbox
+
+" " Color Scheme Solarized
+" set background=black
+" colorscheme monokai
+" let g:solarized_termcolors=256
 
 " python-syntax
 let g:python_highlight_all = 1
@@ -259,7 +272,7 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#whitespace#enabled = 0
 
 " Coc
-let g:coc_global_extensions = [ 'coc-python', 'coc-tsserver', 'coc-emmet', 'coc-html', 'coc-css', 'coc-json', 'coc-git', 'coc-phpls', 'coc-snippets']
+let g:coc_global_extensions = [ 'coc-pyright', 'coc-tsserver', 'coc-emmet', 'coc-html', 'coc-css', 'coc-json', 'coc-git', 'coc-phpls', 'coc-snippets']
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
@@ -288,6 +301,9 @@ autocmd FileType javascript map <buffer> <F2> :w<CR>:exec '! node' shellescape(@
 
 " Markdown run
 autocmd FileType markdown map <buffer> <F2> :w<CR>:InstantMarkdownPreview<CR>
+
+" Html
+autocmd FileType html map <buffer> <F2> :w<CR>:exec '! brave' shellescape(@%, 1)<CR>
 
 " Jinja filetype
 " au BufNewFile,BufRead *.html,*.htm,*.shtml,*.stm set ft=jinja
