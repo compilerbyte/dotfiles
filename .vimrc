@@ -142,9 +142,9 @@ endif
 autocmd! bufwritepost .vimrc source %
 
 " set foldmethod=indent
-nnoremap <space> za
-vnoremap <space> %zf 
-vnoremap <leader><space> zf 
+" nnoremap <space> za
+" vnoremap <space> %zf 
+" vnoremap <leader><space> zf 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                  PLUGINS                                   "
@@ -188,11 +188,12 @@ Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn in
 " Plug 'nvim-telescope/telescope.nvim'
 " Plug 'tbabej/taskwiki'
 Plug 'vim-python/python-syntax'
-Plug 'davidhalter/jedi-vim'
+" Plug 'davidhalter/jedi-vim'
 Plug 'lepture/vim-jinja'
 Plug 'honza/vim-snippets'
 Plug 'nikvdp/ejs-syntax'
-" Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
+Plug 'dense-analysis/ale'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 " Plug 'altercation/vim-colors-solarized'
 
 call plug#end()
@@ -200,10 +201,23 @@ call plug#end()
 "                                 PLUGIN CONFIGURATION  	  	     "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+  let g:ale_fixers = {
+  \   'python': [
+  \       'autopep8'
+  \   ]
+  \}
+
+let g:ale_linters={
+\ 'python': ['pylint'],
+\}
+
 " Show whitespace
 " MUST be inserted BEFORE the colorscheme command
-autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-au InsertLeave * match ExtraWhitespace /\s\+$/
+" autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+" au InsertLeave * match ExtraWhitespace /\s\+$/
+
+" Delete WhiteSpace
+" autocmd BufWritePre *.rb :%s/\s\+$//e
 
 " colorscheme gruvbox 
 set background=dark
@@ -294,7 +308,7 @@ nmap <Leader>di <Plug>VimspectorBalloonEval
 autocmd FileType python map <buffer> <F2> :w<CR>:exec '! python' shellescape(@%, 1)<CR>
 
 "C run
-autocmd BufEnter *.c map <F2> :w <CR> :!gcc % -o %< && ./%< <CR>
+autocmd FileType c map <buffer> <F2> :w <CR> :!gcc % -o %< && ./%< <CR>
 
 " Node run
 autocmd FileType javascript map <buffer> <F2> :w<CR>:exec '! node' shellescape(@%, 1)<CR>
