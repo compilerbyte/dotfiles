@@ -1,11 +1,11 @@
-#!/bin/bash                                                                                                                                                                                                                                                    
-# This script is intended to make switching between laptop and external displays easier when using i3+dmenu                                                                                                                                                    
-# To run this script, map it to some shortcut in your i3 config, e.g:                                                                                                                                                                                          
-# bindsym $mod+p exec --no-startup-id $config/display.sh                                                                                                                                                                                                       
-# IMPORTANT: run chmod +x on the script to make it executable                                                                                                                                                                                                  
-# The result is 4 options appearing in dmenu, from which you can choose                                                                                                                                                                                        
-# This is your default laptop screen, detect by running `xrandr`                                                                                                                                                                                               
-INTERNAL_OUTPUT="LVDS-1"                                                                                                                                                                                                                                       
+#!/bin/bash
+# This script is intended to make switching between laptop and external displays easier when using i3+dmenu                                              
+# To run this script, map it to some shortcut in your i3 config, e.g: 
+# bindsym $mod+p exec --no-startup-id $config/display.sh
+#IMPORTANT: run chmod +x on the script to make it executable
+# The result is 4 options appearing in dmenu, from which you can choose
+# This is your default laptop screen, detect by running `xrandr`
+INTERNAL_OUTPUT="eDP"                                                                                                                                                                             
 # choices will be displayed in dmenu                                                                                                                                                                                                                           
 choices="laptop\ndual\nexternal\nclone"                                                                                                                                                                                                                        
 # Your choice in dmenu will determine what xrandr command to run                                                                                                                                                                                               
@@ -22,10 +22,10 @@ if [ `xrandr | grep HDMI-0 | grep -c ' connected '` -eq 1 ]; then
         EXTERNAL_OUTPUT="HDMI-0"
 fi
 if [ `xrandr | grep HDMI-2 | grep -c ' connected '` -eq 1 ]; then
-        EXTERNAL_OUTPUT="HDMI-2"
+        EXTERNAL_OUTPUT="HDMI-1"
 fi
 if [ `xrandr | grep HDMI-3 | grep -c ' connected '` -eq 1 ]; then
-        EXTERNAL_OUTPUT="HDMI-3"
+        EXTERNAL_OUTPUT="HDMI-2"
 fi
 if [ `xrandr | grep DP1 | grep -c ' connected '` -eq 1 ]; then
         EXTERNAL_OUTPUT="DP-1"
@@ -39,11 +39,11 @@ fi
 
 # xrander will run and turn on the display you want, if you have an option for 3 displays, this will need some modifications
 case "$chosen" in
-    external) xrandr --output eDP --off --output $EXTERNAL_OUTPUT --primary --mode 1366x768 --pos 0x0 --rotate normal;;
-    # laptop) xrandr --output $INTERNAL_OUTPUT --auto --primary --output $EXTERNAL_OUTPUT --off ;;
-    laptop) xrandr --output eDP --primary --mode 1366x768 --pos 0x0 --output $EXTERNAL_OUTPUT --off ;;
-    clone) xrandr --output eDP --auto --output $EXTERNAL_OUTPUT --auto --same-as eDP;;
-    # dual) xrandr --output $INTERNAL_OUTPUT --auto --output $EXTERNAL_OUTPUT --auto --right-of $INTERNAL_OUTPUT --primary ;;
-    dual) xrandr --output eDP --rotate normal --output $EXTERNAL_OUTPUT --primary --mode 1366x768 --pos 1366x0;;
+    external) xrandr --output $INTERNAL_OUTPUT --off --output $EXTERNAL_OUTPUT --primary --mode 1366x768 --pos 0x0 --rotate normal;;
+    laptop) xrandr --output $INTERNAL_OUTPUT --primary --mode 1366x768 --pos 0x0 --rotate normal --output $EXTERNAL_OUTPUT --off --output HDMI-0 --off --output VGA-0 --off;;
+    # laptop) xrandr --output eDP --primary --mode 1366x768 --pos 0x0 --output $EXTERNAL_OUTPUT --off ;;
+    clone) xrandr --output $INTERNAL_OUTPUT --auto --output $EXTERNAL_OUTPUT --auto --same-as $INTERNAL_OUTPUT;;
+    dual) xrandr --output $INTERNAL_OUTPUT --auto --output $EXTERNAL_OUTPUT --auto --right-of $INTERNAL_OUTPUT --primary ;;
+    # dual) xrandr --output eDP --rotate normal --output $EXTERNAL_OUTPUT --primary --mode 1366x768 --pos 1366x0;;
 
 esac

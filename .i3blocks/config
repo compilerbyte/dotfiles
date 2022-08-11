@@ -12,6 +12,11 @@ color=#f8f8f2
 separator_block_width=15
 markup=pango
 
+[openvpn]
+command=$HOME/.config/i3blocks/contrib/openvpn/openvpn
+interval=20
+PID_FILE_FORMAT='/run/openvpn/*.pid'
+
 [bandwidth]
 command=$HOME/.config/i3blocks/contrib/bandwidth/bandwidth
 interval=5
@@ -63,19 +68,20 @@ STEP=5%
 #MIXER=[determined automatically]
 #SCONTROL=[determined automatically]
 
+
+[time_cst]
+command=TZ=":US/Central" date '+%H:%M:%S'
+interval=1
+label=<span color="#ff79c6"> </span>
+
 [date]
 command=date '+%Y-%m-%d %B/%A'
 interval=60
 label=<span color="#8be9fd"> </span>
 
-[time_cst]
-command=TZ=":America/Bogota" date '+%H:%M:%S'
-interval=1
-label=<span color="#ff79c6"> </span>
-
 [battery]
 command=$HOME/.config/i3blocks/contrib/battery2/battery2
-interval=15
+interval=30
 
 [ram-free]
 command=free -h --si | awk 'FNR==2{ print $0 }' | awk '{ print $7 }'
