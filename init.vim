@@ -2,12 +2,13 @@
 "                                    MAIN CONFIGURATION                                     "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+
 set nocompatible
 set rnu
 set ruler " Show the cursor position
 set cursorline
 set showmatch
-set clipboard=unnamedplus
+set clipboard+=unnamedplus
 set mouse=a
 set sw=2
 set path+=**
@@ -165,7 +166,6 @@ endif
 " vnoremap <leader><space> zf 
 "
 "
-"
 " Exit from terminal
 tnoremap <A-n> <C-\><C-n>
 
@@ -176,17 +176,13 @@ inoremap <silent><expr> <Tab>
 
 " Autocomplete with CTRL + F
 inoremap <expr> <c-f> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                  PLUGINS                                   "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Create Folder Plugins
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-call plug#begin('~/.vim/plugged')
+
+call plug#begin('~/.config/nvim/plugged')
 
 Plug 'pangloss/vim-javascript'    " JavaScript support
 Plug 'evanleck/vim-svelte', {'branch': 'main'}

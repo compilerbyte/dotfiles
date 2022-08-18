@@ -15,7 +15,7 @@
 </p>
 
 # Introduction
-Repository containing my configuration files.
+Configuration files and programs for Arch Linux
 
 ## Details 
 - CLI
@@ -80,6 +80,7 @@ Repository containing my configuration files.
 - [docker](https://www.docker.com/) - a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers.
 - [docker-compose](https://docs.docker.com/compose/install/) - Compose is a tool for defining and running multi-container Docker applications.
 - [virtualbox](https://www.virtualbox.org/) - cross-platform virtualization software.
+- [zeal](https://www.zealdocs.org/) - Zeal is an offline documentation browser for software developers.
 ### Presentation and content creation
 - [rclone](https://github.com/rclone/rclone) - is a command-line program to sync files and directories to and from different cloud storage providers.
 - [uxplay](https://github.com/antimof/UxPlay) - dAirPlay Unix mirroring server

@@ -114,10 +114,10 @@ source $ZSH/oh-my-zsh.sh
 
 
 #Personal Alias
-alias v="nvim"
 alias l="exa -lah"
 alias la='exa -lah'
 alias ll='ls -lh'
 alias ls='exa'
-
-export TERM=xterm-256color
+alias v='nvim'
+alias vi='nvim'
+alias vim='nvim'
