@@ -341,7 +341,8 @@ nmap <Leader>di <Plug>VimspectorBalloonEval
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "Python run
-autocmd FileType python map <buffer> <F2> :w<CR>:exec '! python' shellescape(@%, 1)<CR>
+" autocmd FileType python map <buffer> <F2> :w<CR>:exec '! python' shellescape(@%, 1)<CR>
+autocmd FileType python map <buffer> <F2> :w <CR>:split <CR> :term python % <CR>
 
 "C run
 autocmd FileType c map <buffer> <F2> :w <CR> :!gcc % -o %< && ./%< <CR>
