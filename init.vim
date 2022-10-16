@@ -3,7 +3,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
-set nocompatible
 set rnu
 set ruler " Show the cursor position
 set cursorline
@@ -37,7 +36,6 @@ set wildignore+=*.pyc
 set wildignore+=*_build/*
 set wildignore+=**/coverage/*
 set wildignore+=**/node_modules/*
-set wildignore+=**/node_modules/
 set wildignore+=**/android/*
 set wildignore+=**/ios/*
 set wildignore+=**/.git/*
@@ -55,6 +53,7 @@ set expandtab
 " Useful settings
 set history=700
 set undolevels=700
+set lazyredraw
 
 " Options, Colors, Fonts, and Syntax
 filetype plugin indent on
@@ -119,9 +118,9 @@ noremap <leader>bd :bd<cr>
 "Fzf
 " nnoremap <silent> ;f <cmd>:Glcd <bar>:Files <cr>
 " nnoremap <leader>f <cmd>:Files<cr>
-" nnoremap <silent> ;f <cmd>:Files %:p:h<cr>
+nnoremap <silent> ,f <cmd>:Files %:p:h<cr>
 nnoremap <silent> ;f <cmd>:Files <cr>
-" nnoremap <leader>r <cmd>:Rg <cr>
+nnoremap <silent> ,r <cmd>:Rg <cr>
 " nnoremap <silent> ;r <cmd>:Glcd <bar>:Rg <cr>
 nnoremap <silent> ;r <cmd>:lcd%:p:h <bar>:Rg <cr>
 
@@ -169,10 +168,10 @@ endif
 " Exit from terminal
 tnoremap <A-n> <C-\><C-n>
 
-inoremap <silent><expr> <Tab>
-      \ coc#pum#visible() ? coc#pum#next(1) :
-      \ CheckBackspace() ? "\<Tab>" :
-      \ coc#refresh()
+" inoremap <silent><expr> <Tab>
+"       \ coc#pum#visible() ? coc#pum#next(1) :
+"       \ CheckBackspace() ? "\<Tab>" :
+"       \ coc#refresh()
 
 " Autocomplete with CTRL + F
 inoremap <expr> <c-f> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
@@ -182,7 +181,7 @@ inoremap <expr> <c-f> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin(stdpath('data') . '/plugged')
 
 Plug 'pangloss/vim-javascript'    " JavaScript support
 Plug 'evanleck/vim-svelte', {'branch': 'main'}
@@ -198,7 +197,6 @@ Plug 'easymotion/vim-easymotion'
 
 " Theme
 Plug 'morhetz/gruvbox'
-
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
@@ -337,7 +335,8 @@ nmap <Leader>di <Plug>VimspectorBalloonEval
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "Python run
-autocmd FileType python map <buffer> <F2> :w <CR>:split <CR> :term python % <CR>
+autocmd FileType python map <buffer> <F2> :w <CR>:exec '! python' shellescape(@%, 1)<CR>
+" autocmd FileType python map <buffer> <F2> :w <CR>:split <CR> :term python % <CR>
 
 "C run
 autocmd FileType c map <buffer> <F2> :w <CR> :!gcc % -o %< && ./%< <CR>
