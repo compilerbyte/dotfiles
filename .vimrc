@@ -202,6 +202,7 @@ Plug 'easymotion/vim-easymotion'
 
 " Theme
 Plug 'morhetz/gruvbox'
+Plug 'vimsence/vimsence'
 
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -322,7 +323,7 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#whitespace#enabled = 0
 
 " Coc
-let g:coc_global_extensions = [ 'coc-pyright', 'coc-tsserver', 'coc-emmet', 'coc-html', 'coc-css', 'coc-json', 'coc-git', 'coc-phpls', 'coc-snippets']
+let g:coc_global_extensions = [ 'coc-pyright', 'coc-tsserver', 'coc-emmet', 'coc-html', 'coc-css', 'coc-json', 'coc-git', 'coc-phpls', 'coc-snippets', 'coc-go']
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
