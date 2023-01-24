@@ -1,5 +1,4 @@
-<h1 align="center">dotfiles ❤ ~/</h1>
-<h2>Probando push para misiontic ciclo 4</h2>
+<h1 align="center">dotfiles  ~/</h1>
 
 
 ![xhlar dotfiles](https://i.imgur.com/Yh9Ap2n.png)
