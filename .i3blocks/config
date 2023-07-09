@@ -36,7 +36,8 @@ label=
 interval=1
 T_WARN=70
 T_CRIT=90
-#SENSOR_CHIP=""
+SENSOR_CHIP="k10temp-pci-00c3"
+
 [cpu_usage]
 command=$HOME/.config/i3blocks/contrib/cpu_usage/cpu_usage
 interval=10
