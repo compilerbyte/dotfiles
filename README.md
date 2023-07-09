@@ -1,45 +1,44 @@
 <h1 align="center">dotfiles  ~/</h1>
 
 
-![xhlar dotfiles](https://i.imgur.com/Yh9Ap2n.png)
-
-<p align="center">
-    <b>Screenshots</b><br>
-    <a href="https://files.dikiaap.id/img/dotfiles/rofi.png">Rofi</a>&nbsp;&nbsp;&nbsp;
-    <a href="https://files.dikiaap.id/img/dotfiles/dunst.png">Dunst</a>&nbsp;&nbsp;&nbsp;
-    <a href="https://files.dikiaap.id/img/dotfiles/i3blocks.png">i3blocks</a>&nbsp;&nbsp;&nbsp;
-    <a href="https://files.dikiaap.id/img/dotfiles/zsh.png">Zsh</a>&nbsp;&nbsp;&nbsp;
-    <a href="https://files.dikiaap.id/img/dotfiles/tmux.png">tmux</a>&nbsp;&nbsp;&nbsp;
-    <a href="https://files.dikiaap.id/img/dotfiles/colors.png">Colors</a>&nbsp;&nbsp;&nbsp;
-    <a href="https://files.dikiaap.id/img/dotfiles/dircolors.png">dircolors</a>
-</p>
+![xhlar dotfiles](https://camo.githubusercontent.com/c6c38eef47a0cfa9a5a46505a77da416b2ca724e71543f85c97a0cc3dba769ad/68747470733a2f2f6e76636861642e636f6d2f62616e6e65722e77656270)
 
 # Introduction
-Configuration files and programs for Arch Linux
+Configuration files and programs for Arch or Fedora
 
-## Details 
-- CLI
-     - [exa](https://github.com/ogham/exa) - A modern replacement for ls
-     - [Zsh](https://github.com/zsh-users/zsh) - A shell designed for interactive use, although it is also a powerful scripting language.
-        - [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) - An open source, community-driven framework for managing your Zsh configuration.
-        - [z](https://github.com/rupa/z) - Tracks your most used directories, based on frecency.
-     - [Git](https://github.com/git/git) - A free and open source distributed version control system.
-     - [fzf](https://github.com/junegunn/fzf) - A command-line fuzzy finder.
-     - [tasks](https://taskwarrior.org/) -  Taskwarrior is a command line todo list manager
-- GUI
-    - [i3](https://github.com/i3/i3) - A tiling window manager.
+# Main configuration
+
+[i3](https://github.com/i3/i3) - A tiling window manager.
+[i3-gnome](https://github.com/i3-gnome/i3-gnome) - Use i3wm/i3-gaps with GNOME Session infrastructure.
+[i3lock](https://github.com/i3/i3lock) - improved screen locker
+[Rofi](https://github.com/davatorium/rofi) - A window switcher, application launcher and dmenu replacement.
+[fzf](https://github.com/junegunn/fzf) - A command-line fuzzy finder.
+[nvim](https://github.com/NvChad/NvChad) - Blazing fast Neovim config providing solid defaults and a beautiful UI, enhancing your neovim experience.
+[lazyvim](https://github.com/jesseduffield/lazygit) - simple terminal UI for git commands
+[btop](https://github.com/aristocratos/btop) - A monitor of resources
+[Zsh](https://github.com/zsh-users/zsh) - A shell designed for interactive use, although it is also a powerful scripting language.
+[Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) - An open source, community-driven framework for managing your Zsh configuration.
+[z](https://github.com/rupa/z) - Tracks your most used directories, based on frecency.
+[Git](https://github.com/git/git) - A free and open source distributed version control system.
+[Gnome Terminal](https://github.com/GNOME/gnome-terminal) - A cross-platform, GPU-accelerated terminal emulator.
+[exa](https://github.com/ogham/exa) - A modern replacement for ls
+[Font Awesome](https://github.com/FortAwesome/Font-Awesome) - Iconic font.
+[picom](https://github.com/yshui/picom) - A lightweight compositor for X11.
+
+# Dependencies
+[xcwd](https://github.com/schischi/xcwd) - A simple tool that prints the current working directory of the currently focused window
+[libx11-devel](https://packages.fedoraproject.org/pkgs/libX11/libX11-devel/) - Development files for libX11
+
+
+## Laptop
     - [i3-battery-popup](https://website.org/) - pop up battery
     - [i3blocks](https://github.com/vivien/i3blocks) - A feed generator for text based status bars.
         - [i3blocks-contrib](https://github.com/vivien/i3blocks-contrib) - A set of scripts for i3blocks, contributed by the community.
-    - [Rofi](https://github.com/davatorium/rofi) - A window switcher, application launcher and dmenu replacement.
     - [arandr](https://github.com/) - xrandr gui
-    - [picom](https://github.com/yshui/picom) - A lightweight compositor for X11.
-    - [Gnome Terminal](https://github.com/GNOME/gnome-terminal) - A cross-platform, GPU-accelerated terminal emulator.
     - [Arc Theme](https://github.com/arc-design/arc-theme) (Fork) - A flat theme with transparent elements for GTK 3, GTK 2, and GNOME Shell.
-    - [Font Awesome](https://github.com/FortAwesome/Font-Awesome) - Iconic font.
     - [Dark Planet](https://www.pling.com/p/1163924/) - Wallpaper.
 ---
-## List of programs 
+# List of programs 
 
 - [coinomi](https://www.coinomi.com/) - Coinomi desktop wallet. Securely store, manage and exchange Bitcoin, Ethereum, and more than 500 other blockchain assets
 - [electrum](https://electrum.org/) - Lightweight Bitcoin wallet 
@@ -60,10 +59,8 @@ Configuration files and programs for Arch Linux
 - [gnome-clocks](https://gitlab.gnome.org/GNOME/gnome-clocks) - a simple application to show the time and date in multiple locations and set alarms or timer
 - [gnome-pomodoro](https://github.com/gnome-pomodoro/gnome-pomodoro) - A time management utility for GNOME based on the pomodoro technique!
 - [gnome-terminal](https://archlinux.org/packages/extra/x86_64/gnome-terminal/) - The GNOME Terminal Emulator
-- [notes](https://github.com/pimterry/notes) - Simple delightful note taking, with more unix and less lock-in.
 - [dijo](https://github.com/nerdypepper/dijo) - scriptable, curses-based, digital habit tracker
 - [geogebra](https://geogebra.org/) - an interactive geometry, algebra, statistics and calculus application, intended for learning and teaching mathematics
-- [xpad](https://launchpad.net/xpad) - Xpad is a sticky note application for jotting down things to remember.
 - [kile](https://kile.sourceforge.io/) - TeX/LaTeX editor to edit TeX/LaTeX source code
 - [libreoffice](https://www.libreoffice.org/) -  free and open-source office productivity software suite
 - [zoom](https://zoom.com) -  videotelephony software program
@@ -73,7 +70,8 @@ Configuration files and programs for Arch Linux
 - [pcmanfm](https://github.com/lxde/pcmanfm) - Extremely fast and lightweight file manager
 - [xarchiver](https://archlinux.org/packages/community/x86_64/xarchiver/) - frontend to various command line archivers
 - [CutyCapt](https://github.com/amw/CutyCapt) - capture Webkit's rendering of a web page, and save that rendering as either SVG, PDF, PS, PNG, JPEG, TIFF, GIF, or BMP files
-### Programming
+
+## Programming
 - [staruml](https://staruml.io/) - a sophisticated software modeler aimed to support agile and concise modeling
 - [sqlitestudio](https://sqlitestudio.pl/) - Create, edit, browse SQLite databases.
 - [mysql-workbench](https://www.mysql.com/products/workbench/) - a visual database design tool that integrates SQL development, administration, database design, creation and maintenance into a single integrated development environment for the MySQL 
@@ -81,7 +79,7 @@ Configuration files and programs for Arch Linux
 - [docker-compose](https://docs.docker.com/compose/install/) - Compose is a tool for defining and running multi-container Docker applications.
 - [virtualbox](https://www.virtualbox.org/) - cross-platform virtualization software.
 - [zeal](https://www.zealdocs.org/) - Zeal is an offline documentation browser for software developers.
-### Presentation and content creation
+## Presentation and content creation
 - [rclone](https://github.com/rclone/rclone) - is a command-line program to sync files and directories to and from different cloud storage providers.
 - [uxplay](https://github.com/antimof/UxPlay) - dAirPlay Unix mirroring server
 - [phonepresenter](https://phonepresenter.github.io/) - Control presentations from your smartphone
@@ -95,5 +93,5 @@ Configuration files and programs for Arch Linux
 - [gromit-mpx](https://github.com/bk138/gromit-mpx) - an on-screen annotation tool that works with any Unix desktop
 - [audacity](https://github.com/audacity/audacity) - Audio Editor
 ---
-  ## Thanks to...
+ # Thanks to...
 - [Dikiaap](https://github.com/dikiaap) and his [dotfiles](https://github.com/dikiaap/dotfiles)
