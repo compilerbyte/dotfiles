@@ -226,7 +226,7 @@ bindsym $mod+n exec nautilus
 
 ##Take Screenshot
 bindsym Print exec gnome-screenshot
-bindsym Shift+Print exec gnome-screenshot -a
+bindsym Shift+Print exec gnome-screenshot --area
 
 # bindsym Print exec scrot
 # bindsym Shift+Print exec  scrot --select 
@@ -276,5 +276,3 @@ bindsym $mod+Shift+x move container to output next
 
 #focus other monitor 
 bindsym $mod+x focus output left
-
-
