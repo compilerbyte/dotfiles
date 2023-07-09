@@ -226,14 +226,14 @@ bindsym $mod+n exec nautilus
 
 ##Take Screenshot
 bindsym Print exec gnome-screenshot
-bindsym Shift+Print exec gnome-screenshot --area
+bindsym $mod+Print exec "gnome-screenshot -a"
 
 # bindsym Print exec scrot
 # bindsym Shift+Print exec  scrot --select 
 
 
 #Notify Low Battery
-exec --no-startup-id i3-battery-popup -L 15 -t 1m
+# exec --no-startup-id i3-battery-popup -L 15 -t 1m
 
 #Start dmenu ( a program launcher  )
 bindsym $mod+d exec rofi -show run
