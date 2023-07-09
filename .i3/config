@@ -220,9 +220,9 @@ bindsym Control+Mod1+l exec "i3lock -c 000000"
 #Suspend PC
 bindsym Shift+Mod1+l exec "systemctl suspend"
 
-#Run Nautilus
-# bindsym $mod+n exec nautilus
-bindsym $mod+n exec pcmanfm
+# Run File Explorer
+bindsym $mod+n exec nautilus
+# bindsym $mod+n exec pcmanfm
 
 ##Take Screenshot
 bindsym Print exec gnome-screenshot
