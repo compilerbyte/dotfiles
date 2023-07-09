@@ -8,35 +8,35 @@ Configuration files and programs for Arch or Fedora
 
 # Main configuration
 
-[i3](https://github.com/i3/i3) - A tiling window manager.
-[i3-gnome](https://github.com/i3-gnome/i3-gnome) - Use i3wm/i3-gaps with GNOME Session infrastructure.
-[i3lock](https://github.com/i3/i3lock) - improved screen locker
-[Rofi](https://github.com/davatorium/rofi) - A window switcher, application launcher and dmenu replacement.
-[fzf](https://github.com/junegunn/fzf) - A command-line fuzzy finder.
-[nvim](https://github.com/NvChad/NvChad) - Blazing fast Neovim config providing solid defaults and a beautiful UI, enhancing your neovim experience.
-[lazyvim](https://github.com/jesseduffield/lazygit) - simple terminal UI for git commands
-[btop](https://github.com/aristocratos/btop) - A monitor of resources
-[Zsh](https://github.com/zsh-users/zsh) - A shell designed for interactive use, although it is also a powerful scripting language.
-[Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) - An open source, community-driven framework for managing your Zsh configuration.
-[z](https://github.com/rupa/z) - Tracks your most used directories, based on frecency.
-[Git](https://github.com/git/git) - A free and open source distributed version control system.
-[Gnome Terminal](https://github.com/GNOME/gnome-terminal) - A cross-platform, GPU-accelerated terminal emulator.
-[exa](https://github.com/ogham/exa) - A modern replacement for ls
-[Font Awesome](https://github.com/FortAwesome/Font-Awesome) - Iconic font.
-[picom](https://github.com/yshui/picom) - A lightweight compositor for X11.
+- [i3](https://github.com/i3/i3) - A tiling window manager.
+- [i3-gnome](https://github.com/i3-gnome/i3-gnome) - Use i3wm/i3-gaps with GNOME Session infrastructure.
+- [i3lock](https://github.com/i3/i3lock) - improved screen locker
+- [Rofi](https://github.com/davatorium/rofi) - A window switcher, application launcher and dmenu replacement.
+- [fzf](https://github.com/junegunn/fzf) - A command-line fuzzy finder.
+- [nvim](https://github.com/NvChad/NvChad) - Blazing fast Neovim config providing solid defaults and a beautiful UI, enhancing your neovim experience.
+- [lazyvim](https://github.com/jesseduffield/lazygit) - simple terminal UI for git commands
+- [btop](https://github.com/aristocratos/btop) - A monitor of resources
+- [Zsh](https://github.com/zsh-users/zsh) - A shell designed for interactive use, although it is also a powerful scripting language.
+- [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) - An open source, community-driven framework for managing your Zsh configuration.
+- [z](https://github.com/rupa/z) - Tracks your most used directories, based on frecency.
+- [Git](https://github.com/git/git) - A free and open source distributed version control system.
+- [Gnome Terminal](https://github.com/GNOME/gnome-terminal) - A cross-platform, GPU-accelerated terminal emulator.
+- [exa](https://github.com/ogham/exa) - A modern replacement for ls
+- [Font Awesome](https://github.com/FortAwesome/Font-Awesome) - Iconic font.
+- [picom](https://github.com/yshui/picom) - A lightweight compositor for X11.
 
 # Dependencies
-[xcwd](https://github.com/schischi/xcwd) - A simple tool that prints the current working directory of the currently focused window
-[libx11-devel](https://packages.fedoraproject.org/pkgs/libX11/libX11-devel/) - Development files for libX11
-
+- [xcwd](https://github.com/schischi/xcwd) - A simple tool that prints the current working directory of the currently focused window
+- [libx11-devel](https://packages.fedoraproject.org/pkgs/libX11/libX11-devel/) - Development files for libX11
 
 ## Laptop
-    - [i3-battery-popup](https://website.org/) - pop up battery
-    - [i3blocks](https://github.com/vivien/i3blocks) - A feed generator for text based status bars.
-        - [i3blocks-contrib](https://github.com/vivien/i3blocks-contrib) - A set of scripts for i3blocks, contributed by the community.
-    - [arandr](https://github.com/) - xrandr gui
-    - [Arc Theme](https://github.com/arc-design/arc-theme) (Fork) - A flat theme with transparent elements for GTK 3, GTK 2, and GNOME Shell.
-    - [Dark Planet](https://www.pling.com/p/1163924/) - Wallpaper.
+- [i3-battery-popup](https://website.org/) - pop up battery
+- [i3blocks](https://github.com/vivien/i3blocks) - A feed generator for text based status bars.
+- [i3blocks-contrib](https://github.com/vivien/i3blocks-contrib) - A set of scripts for i3blocks, contributed by the community.
+- [arandr](https://github.com/) - xrandr gui
+- [Arc Theme](https://github.com/arc-design/arc-theme) (Fork) - A flat theme with transparent elements for GTK 3, GTK 2, and GNOME Shell.
+- [Dark Planet](https://www.pling.com/p/1163924/) - Wallpaper.
+
 ---
 # List of programs 
 
