@@ -238,6 +238,8 @@ bindsym $mod+Print exec "gnome-screenshot -a"
 #Start dmenu ( a program launcher  )
 bindsym $mod+d exec rofi -show run
 
+bindsym $mod+Shift+d exec rofi -show window
+
 #Gaps
 gaps outer 1
 gaps inner 10
@@ -267,9 +269,9 @@ bindsym $mod+Shift+Return exec gnome-terminal --working-directory="`xcwd`"
 # bindsym $mod+Shift+Return exec cd "$(xcwd)" && exec xterm
 
 #set monitor workspace 
-workspace $ws1 output VGA-0 
-workspace $ws2 output VGA-0 
-workspace $ws10 output eDP
+workspace $ws1 output HDMI-A-0 
+workspace $ws2 output HDMI-A-0
+workspace $ws10 output DVI-D-0
 
 #move container to the next output
 bindsym $mod+Shift+x move container to output next
