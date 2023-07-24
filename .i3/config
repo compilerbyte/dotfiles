@@ -181,6 +181,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
   # font pango:DejaVu Sans Mono, Icons 8
+  tray_output HDMI-A-0
   font pango:Hack, Icons 8
 	position top
 	height 30
@@ -200,13 +201,14 @@ bar {
 }
 
 ##################################################################################
-#MyConfig
+#                   Personal Config                                              #
 ##################################################################################
 
 
 #Switch workspace
 bindsym $mod+p workspace next
 bindsym $mod+o workspace prev
+
 #Focused Window
 client.focused #ffe57 #bf7500 #ffe57
 
@@ -235,9 +237,12 @@ bindsym $mod+Print exec "gnome-screenshot -a"
 #Notify Low Battery
 # exec --no-startup-id i3-battery-popup -L 15 -t 1m
 
-#Start dmenu ( a program launcher  )
+# Start rofi - A program launcher
+# Rofi select run
 bindsym $mod+d exec rofi -show run
 
+
+# Rofi select Window
 bindsym $mod+Shift+d exec rofi -show window
 
 #Gaps
@@ -245,7 +250,7 @@ gaps outer 1
 gaps inner 10
 
 #Windows Withouth tittle
-for_window [class="^.*"] border pixel 3
+for_window [class="^.*"] border pixel 3 
 
 #Picom
 exec picom -b -f --no-vsync

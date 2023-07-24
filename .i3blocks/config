@@ -47,6 +47,11 @@ T_WARN=50
 T_CRIT=80
 DECIMALS=2
 
+[bandwidth]
+command=$HOME/.config/i3blocks/contrib/bandwidth/bandwidth
+interval=5
+INTERFACE=eth0
+
 [ssid]
 command=echo -n ' ' ; $HOME/.config/i3blocks/contrib/ssid/ssid
 INTERFACE=wlan0
