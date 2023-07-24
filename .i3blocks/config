@@ -19,12 +19,11 @@ PID_FILE_FORMAT='/run/openvpn/*.pid'
 
 [bandwidth]
 command=$HOME/.config/i3blocks/contrib/bandwidth/bandwidth
-interval=5
-INTERFACE=wlan0
+interval=1
+INTERFACE=eno1
 INLABEL=IN 
 OUTLABEL=OUT
 #TREAT_UNKNOWN_AS_UP=0
-
 
 [load_average]
 command=echo -n 'CPU: '; $HOME/.config/i3blocks/contrib/load_average/load_average
@@ -47,11 +46,6 @@ T_WARN=50
 T_CRIT=80
 DECIMALS=2
 
-[bandwidth]
-command=$HOME/.config/i3blocks/contrib/bandwidth/bandwidth
-interval=5
-INTERFACE=eth0
-
 [ssid]
 command=echo -n ' ' ; $HOME/.config/i3blocks/contrib/ssid/ssid
 INTERFACE=wlan0
@@ -63,6 +57,7 @@ label=
 INTERFACE=wlan0
 interval=60
 COLOR_GE80=#00FF00
+
 
 [volume]
 command=$HOME/.config/i3blocks/contrib/volume/volume
