@@ -231,7 +231,7 @@ bindsym $mod+n exec nautilus
 bindsym Print exec gnome-screenshot
 
 # Take Screenshot area
-bindsym --release Shift+Print exec gnome-screenshot -a
+bindsym --release $mod+Shift+S exec gnome-screenshot -a
 # bindsym Control+Print exec scrot 
 
 
