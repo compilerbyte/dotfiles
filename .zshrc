@@ -130,11 +130,16 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status virtualenv)
 
-alias vim="nvim"
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+
+# Editor
+alias vim="nvim"
+
+# Screenshot
+alias scrot='scrot -s ~/Pictures/Screenshot-area-%b%d::%H%M%S.png'
 
 
 # Navigation

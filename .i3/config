@@ -228,10 +228,10 @@ bindsym $mod+n exec nautilus
 
 ##Take Screenshot
 bindsym Print exec gnome-screenshot
-bindsym $mod+Print exec "gnome-screenshot -a"
 
-# bindsym Print exec scrot
-# bindsym Shift+Print exec  scrot --select 
+# Take Screenshot area
+bindsym --release Shift+Print exec gnome-screenshot -a
+# bindsym Control+Print exec scrot 
 
 
 #Notify Low Battery
