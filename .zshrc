@@ -157,10 +157,11 @@ alias 4='cd -4'
 alias 5='cd -5'
 
 # Easy report
-alias ls='ls -Fh --color=auto --group-directories-first'
+# alias ls='ls -Fh --color=auto --group-directories-first'
+alias ls="exa"
 alias grep='grep --color=auto'
-alias l='ls -l'
-alias la='ls -lA'
+alias l='exa -l'
+alias la='exa -la'
 alias lra='ls --sort=time -rl'
 alias lr='ls -R'
 alias lf='ls -l | grep "^-"'
