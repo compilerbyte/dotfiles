@@ -58,8 +58,8 @@ bindsym $mod+Shift+q kill
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+o focus left
-bindsym $mod+p focus right
+bindsym $mod+j focus left
+bindsym $mod+k focus right
 bindsym $mod+l focus up
 bindsym $mod+ntilde focus down
 
@@ -207,8 +207,8 @@ bar {
 
 
 #Switch workspace
-bindsym $mod+j workspace next
-bindsym $mod+k workspace prev
+bindsym $mod+o workspace prev
+bindsym $mod+p workspace next
 
 #Focused Window
 client.focused #ffe57 #bf7500 #ffe57
