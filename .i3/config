@@ -133,10 +133,10 @@ bindsym $mod+bar workspace $ws9
 bindsym $mod+0 workspace $ws10
 
 # move focused container to workspace
-bindsym $mod+Shift+dead_acute move container to workspace $ws1
-bindsym $mod+Shift+plus move container to workspace $ws2
-bindsym $mod+Shift+braceleft move container to workspace $ws3
-bindsym $mod+Shift+braceright move container to workspace $ws4
+bindsym $mod+Shift+braceleft move container to workspace $ws1
+bindsym $mod+Shift+braceright move container to workspace $ws2
+bindsym $mod+Shift+dead_acute move container to workspace $ws3
+bindsym $mod+Shift+plus move container to workspace $ws4
 bindsym $mod+Shift+comma move container to workspace $ws5
 bindsym $mod+Shift+period move container to workspace $ws6
 bindsym $mod+Shift+apostrophe move container to workspace $ws7
