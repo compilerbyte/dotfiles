@@ -111,9 +111,9 @@ bindsym $mod+a focus parent
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 ""
 set $ws2 ""
-set $ws3 ""
-set $ws4 ""
-set $ws5 "󱤙"
+set $ws3 "󱤙"
+set $ws4 ""
+set $ws5 ""
 set $ws6 ""
 set $ws7 ""
 set $ws8 "󰒋"
@@ -121,12 +121,12 @@ set $ws9 ""
 set $ws10 "󰍹"
 
 # switch to workspace
-bindsym $mod+dead_acute workspace $ws1
-bindsym $mod+plus workspace $ws2
-bindsym $mod+braceleft workspace $ws3
-bindsym $mod+braceright workspace $ws4
-bindsym $mod+period workspace $ws5
-bindsym $mod+minus workspace $ws6
+bindsym $mod+braceleft workspace $ws1
+bindsym $mod+braceright workspace $ws2
+bindsym $mod+dead_acute workspace $ws3
+bindsym $mod+plus workspace $ws4
+bindsym $mod+comma workspace $ws5
+bindsym $mod+period workspace $ws6
 bindsym $mod+apostrophe workspace $ws7
 bindsym $mod+questiondown workspace $ws8
 bindsym $mod+bar workspace $ws9
@@ -137,8 +137,8 @@ bindsym $mod+Shift+dead_acute move container to workspace $ws1
 bindsym $mod+Shift+plus move container to workspace $ws2
 bindsym $mod+Shift+braceleft move container to workspace $ws3
 bindsym $mod+Shift+braceright move container to workspace $ws4
-bindsym $mod+Shift+period move container to workspace $ws5
-bindsym $mod+Shift+minus move container to workspace $ws6
+bindsym $mod+Shift+comma move container to workspace $ws5
+bindsym $mod+Shift+period move container to workspace $ws6
 bindsym $mod+Shift+apostrophe move container to workspace $ws7
 bindsym $mod+Shift+questiondown move container to workspace $ws8
 bindsym $mod+Shift+bar move container to workspace $ws9
