@@ -58,8 +58,8 @@ bindsym $mod+Shift+q kill
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus right
+bindsym $mod+o focus left
+bindsym $mod+p focus right
 bindsym $mod+l focus up
 bindsym $mod+ntilde focus down
 
@@ -207,27 +207,27 @@ bar {
 
 
 #Switch workspace
-bindsym $mod+p workspace next
-bindsym $mod+o workspace prev
+bindsym $mod+j workspace next
+bindsym $mod+k workspace prev
 
 #Focused Window
 client.focused #ffe57 #bf7500 #ffe57
 
-#Brightness
+# Brightness
 bindsym Control+Shift+F6 exec brightnessctl s 20%-
 bindsym Control+Shift+F7 exec brightnessctl s +20%
 
-#Lock Screen
+# Lock Screen
 bindsym Control+Mod1+l exec "i3lock -c 000000"
 
-#Suspend PC
+# Suspend PC
 bindsym Shift+Mod1+l exec "systemctl suspend"
 
 # Run File Explorer
 bindsym $mod+n exec nautilus
 # bindsym $mod+n exec pcmanfm
 
-##Take Screenshot
+# Take Screenshot
 bindsym Print exec gnome-screenshot
 
 # Take Screenshot area
@@ -235,53 +235,57 @@ bindsym --release $mod+Shift+S exec gnome-screenshot -a
 # bindsym Control+Print exec scrot 
 
 
-#Notify Low Battery
+# Notify Low Battery
 # exec --no-startup-id i3-battery-popup -L 15 -t 1m
 
-# Start rofi - A program launcher
 # Rofi select run
 bindsym $mod+d exec rofi -show run
-
 
 # Rofi select Window
 bindsym $mod+Shift+d exec rofi -show window
 
-#Gaps
+# Gaps
 gaps outer 1
 gaps inner 10
 
-#Windows Withouth tittle
+# Windows Withouth tittle
 for_window [class="^.*"] border pixel 3 
 
-#Picom
+# Picom
 exec picom -b -f --no-vsync
 
-#Keyboard Language Default
+# Keyboard Language Default
 exec --no-startup-id setxkbmap "latam"
 
-#Switch KeyBoard Language
+# Switch KeyBoard Language
 bindsym $mod+Shift+z exec setxkbmap latam
 bindsym $mod+z exec setxkbmap us
 
 
-#Wallpaper
+# Wallpaper
 exec feh --bg-fill $HOME/.config/i3/wallpapers/wallpaper.jpg
 
 #Script Switch Monitor 
 bindsym Shift+$mod+p exec $HOME/.config/i3/scripts/display.sh
 
-#Open Directory
+# Open Directory
 # bindsym $mod+Shift+Return exec gnome-terminal --working-directory="`xcwd`"
 bindsym $mod+Shift+Return exec kitty --working-directory="`xcwd`"
 # bindsym $mod+Shift+Return exec cd "$(xcwd)" && exec xterm
 
-#set monitor workspace 
+# set monitor workspace 
 workspace $ws1 output HDMI-A-0 
 workspace $ws2 output HDMI-A-0
 workspace $ws10 output DVI-D-0
 
-#move container to the next output
+# move container to the next output
 bindsym $mod+Shift+x move container to output next
 
-#focus other monitor 
+# focus other monitor 
 bindsym $mod+x focus output left
+
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+2 move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+2 scratchpad show
