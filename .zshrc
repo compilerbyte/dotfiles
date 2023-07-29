@@ -82,8 +82,10 @@ export ZSH="$HOME/.oh-my-zsh"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z zsh-syntax-highlighting zsh-autosuggestions virtualenvwrapper fzf) # NEED TO UPDATE VIRTUALENVWRAPPER
+plugins=(git z zsh-syntax-highlighting zsh-autosuggestions virtualenvwrapper fzf) 
 # plugins=(git z zsh-syntax-highlighting zsh-autosuggestions virtualenv fzf)
+# Modify the script of virtualenvwrapper and use grep -E 
+# .local/bin/virtualenvwrapper.sh and replace egrep for grep -E 
 
 source $ZSH/oh-my-zsh.sh
 
@@ -139,13 +141,8 @@ export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-
 # Editor
 alias vim="nvim"
-
-# Screenshot
-alias scrot='scrot -s ~/Pictures/Screenshot-area-%b%d::%H%M%S.png'
-
 
 # Navigation
 alias ..='cd ..'
