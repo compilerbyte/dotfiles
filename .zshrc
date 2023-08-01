@@ -1,7 +1,4 @@
 export TERM=xterm-256color
-export GTK_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
-export QT_IM_MODULE=ibus
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -140,6 +137,7 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:~/go/bin
 
 # Editor
 alias vim="nvim"
