@@ -194,3 +194,4 @@ alias disk='df -h | grep sd \
     | sed -e "s_9[0-9]%_\x1b[31m&\x1b[0m_" \
     | sed -e "s_/mnt/[-_A-Za-z0-9]*_\x1b[34;1m&\x1b[0m_"'
 alias preview='fzf --height=50% --layout=reverse --preview="bat --color=always {}"'
+alias pdf=evince
