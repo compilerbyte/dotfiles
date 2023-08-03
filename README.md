@@ -79,6 +79,10 @@ Configuration files and programs for Arch or Fedora
 - [docker-compose](https://docs.docker.com/compose/install/) - Compose is a tool for defining and running multi-container Docker applications.
 - [virtualbox](https://www.virtualbox.org/) - cross-platform virtualization software.
 - [zeal](https://www.zealdocs.org/) - Zeal is an offline documentation browser for software developers.
+
+# Typing
+- [espanso](https://github.com/espanso/espanso) - Cross-platform Text Expander written in Rust 
+
 ## Presentation and content creation
 - [rclone](https://github.com/rclone/rclone) - is a command-line program to sync files and directories to and from different cloud storage providers.
 - [uxplay](https://github.com/antimof/UxPlay) - dAirPlay Unix mirroring server
@@ -92,6 +96,7 @@ Configuration files and programs for Arch or Fedora
 - [screenkey](https://github.com/wavexx/screenkey) - A screencast tool to display your keys inspired by Screenflick
 - [gromit-mpx](https://github.com/bk138/gromit-mpx) - an on-screen annotation tool that works with any Unix desktop
 - [audacity](https://github.com/audacity/audacity) - Audio Editor
+
 ---
  # Thanks to...
 - [Dikiaap](https://github.com/dikiaap) and his [dotfiles](https://github.com/dikiaap/dotfiles)
