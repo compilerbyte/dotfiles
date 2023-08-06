@@ -265,8 +265,10 @@ bindsym $mod+z exec setxkbmap us
 # Wallpaper
 exec feh --bg-fill $HOME/.config/i3/wallpapers/wallpaper.jpg
 
-#Script Switch Monitor 
+# Script Switch Monitor 
 bindsym Shift+$mod+p exec $HOME/.config/i3/scripts/display.sh
+
+# Open terinal on same directory
 
 # bindsym $mod+Shift+Return exec gnome-terminal --working-directory="`xcwd`"
 bindsym $mod+Shift+Return exec kitty --working-directory="`xcwd`"
@@ -292,3 +294,6 @@ bindsym $mod+2 scratchpad show
 
 # Start applications on workspace
 exec --no-startup-id i3-msg 'workspace $ws10; exec spotify; exec mattermost-desktop;' 
+
+# Open Gnome Control 
+bindsym $mod+i exec gnome-control-center
