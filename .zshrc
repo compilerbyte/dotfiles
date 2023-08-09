@@ -86,7 +86,9 @@ plugins=(git z zsh-syntax-highlighting zsh-autosuggestions virtualenvwrapper fzf
 
 source $ZSH/oh-my-zsh.sh
 
+################################
 # User configuration
+################################
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -127,7 +129,7 @@ source $ZSH/oh-my-zsh.sh
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+# source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -140,3 +142,4 @@ source ~/.exports
 # file to source (load) the aliases from the .aliases file:
 source ~/.aliases
 
+source $ZSH/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
