@@ -17,7 +17,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -35,7 +35,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
 # zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
 # zstyle ':omz:update' frequency 13
@@ -134,64 +134,9 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status virtualenv)
 
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-export PATH=$PATH:~/go/bin
+# file to source (load) the exports from the .exports file
+source ~/.exports
 
-# Editor
-alias vim="nvim"
+# file to source (load) the aliases from the .aliases file:
+source ~/.aliases
 
-# Navigation
-alias ..='cd ..'
-alias ...='cd ../..'
-alias .3='cd ../../..'
-alias .4='cd ../../../..'
-alias .5='cd ../../../../..'
-alias ~='cd ~'
-alias -- -='cd -'
-alias 1='cd -'
-alias 2='cd -2'
-alias 3='cd -3'
-alias 4='cd -4'
-alias 5='cd -5'
-
-# Easy report
-# alias ls='ls -Fh --color=auto --group-directories-first'
-alias ls="exa"
-alias grep='grep --color=auto'
-alias l='exa -l'
-alias la='exa -la'
-alias lra='ls --sort=time -rl'
-alias lr='ls -R'
-alias lf='ls -l | grep "^-"'
-alias l.f='ls -ld .* | grep "^-"'
-alias ld='ls -l | grep "^d"'
-alias l.d='ls -ld .* | grep "^d"'
-alias dud='du -d 1 -h'
-alias duf='du -sh *'
-alias fdir='find . -type d -name'
-alias ff='find . -type f -name'
-alias h='history'
-alias hgrep='history | grep'
-alias lgrep='ls -l | grep'
-alias lagrep='ls -lA | grep'
-alias sgrep='grep -R -n -H -C 5 --exclude-dir={.git,.svn,.tldr,node_modules,Trash,vendor}'
-alias cp='cp -iv'
-alias mv='mv -iv'
-alias ln='ln -iv'
-alias mkdir='mkdir -v'
-alias rm='rm -i'
-alias rmf='rm -rf'
-alias p='ps axo pid,user,pcpu,comm'
-alias uptime='uptime -p'
-alias free='free -h'
-alias disk='df -h | grep sd \
-    | sed -e "s_/dev/sda[1-9]_\x1b[34m&\x1b[0m_" \
-    | sed -e "s_/dev/sd[b-z][1-9]_\x1b[33m&\x1b[0m_" \
-    | sed -e "s_[,0-9]*[MG]_\x1b[36m&\x1b[0m_" \
-    | sed -e "s_[0-9]*%_\x1b[32m&\x1b[0m_" \
-    | sed -e "s_9[0-9]%_\x1b[31m&\x1b[0m_" \
-    | sed -e "s_/mnt/[-_A-Za-z0-9]*_\x1b[34;1m&\x1b[0m_"'
-alias preview='fzf --height=50% --layout=reverse --preview="bat --color=always {}"'
-alias pdf=evince
