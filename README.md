@@ -6,6 +6,16 @@
 # Introduction
 Configuration files and programs for Arch or Fedora
 
+# How to install
+
+Use install.sh for dotfiles and program.sh for programs and dependencies.
+
+1. chmod +x install.sh
+2. ./install.sh -i
+3. Enjoy this configuration
+
+Same instructions as above for programs and dependencies.
+
 # Main configuration
 
 - [i3](https://github.com/i3/i3) - A tiling window manager.

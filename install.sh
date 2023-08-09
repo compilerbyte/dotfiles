@@ -77,6 +77,19 @@ install_dotfiles() {
     echo -e "If you want to restore your old config, you can use ${red}./install.sh -r${white} command." >&2
 }
 
+install_programs(){
+   read -p "Do you want to install programs and dependencies on your system? (y/n): " choice
+
+  if [ "$choice" == "y" ] || [ "$choice" == "Y" ]; then
+      # Ejecuta el archivo .sh para la instalación del programa
+      chmod +x programs.sh
+      ./programs.sh
+  else
+      echo "Cancel installation."
+  fi 
+
+}
+
 uninstall_dotfiles() {
     if [ -f "$backup_dir/check-backup.txt" ]; then
         for dots_home in "${dotfiles_home_dir[@]}"
@@ -122,6 +135,7 @@ main() {
             ;;
         -i)
             install_dotfiles
+            install_programs
             ;;
         -r)
             uninstall_dotfiles
