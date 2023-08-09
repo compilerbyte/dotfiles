@@ -83,9 +83,9 @@ install_programs(){
   if [ "$choice" == "y" ] || [ "$choice" == "Y" ]; then
       # Ejecuta el archivo .sh para la instalación del programa
       chmod +x programs.sh
-      ./programs.sh
+      ./programs.sh -i
   else
-      echo "Cancel installation."
+      echo "Welcome back sir. Cancel installation."
   fi 
 
 }
