@@ -94,8 +94,8 @@ install_plugins(){
   green_msg "Installing plugins for ohmyzsh..."
   declare -A repos=(
       ["https://github.com/romkatv/powerlevel10k.git"]="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k:--depth=1 Repo 1"
-      ["https://github.com/zsh-users/zsh-autosuggestions.git"]="${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions: Repo 2" 
-      ["https://github.com/zsh-users/zsh-syntax-highlighting.git"]="${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting: Repo 3" 
+      ["https://github.com/zsh-users/zsh-autosuggestions.git"]="${ZSH_CUSTOM:~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions: Repo 2" 
+      ["https://github.com/zsh-users/zsh-syntax-highlighting.git"]="${ZSH_CUSTOM:~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting: Repo 3" 
       ["https://github.com/marlonrichert/zsh-autocomplete.git"]="$ZSH/plugins/zsh-autocomplete:--depth=1 Repo 4" 
   )
 
