@@ -16,22 +16,39 @@ Options:
 EOF
 }
 
+install_ohmyzsh() {)
+  # Install Oh my Zsh 
+  if [ -d "$HOME/.oh-my-zsh" ]; then
+      echo "Oh My Zsh is already installed."
+  else
+      green_msg "Installing oh my zsh on your system..."
+      sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  fi
+}
+
+install_dependencies() {
+  echo "Installing dependencies..."
+}
+
 detect_os(){
     if [[ "$OSTYPE" == "linux-gnu"* ]]; then
       if [ -f "/etc/lsb-release" ]; then
           # Ubuntu/Debian
           install_debian
+          install_ohmyzsh
       elif [ -f "/etc/redhat-release" ]; then
           # CentOS/RHEL
           install_fedora
+          install_ohmyzsh
       else
           echo "Not supported on your system"
       fi
   elif [[ "$OSTYPE" == "darwin"* ]]; then
       # macOS
       install_mac
+      install_ohmyzsh
   else
-      echo "Sistema operativo no compatible"
+      echo "Not supported on your system"
   fi
 }
 

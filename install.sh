@@ -90,14 +90,6 @@ install_plugins(){
     echo -e "\e[32m$1\e[0m"
 }
 
-  # Install Oh my Zsh 
-  if [ -d "$HOME/.oh-my-zsh" ]; then
-      echo "Oh My Zsh is already installed."
-  else
-      green_msg "Installing oh my zsh on your system..."
-      sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-  fi
-
   # Install Plugins
   green_msg "Installing plugins for ohmyzsh..."
   declare -A repos=(
