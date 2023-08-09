@@ -79,7 +79,7 @@ zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z zsh-syntax-highlighting zsh-autosuggestions virtualenvwrapper fzf) 
+plugins=(git z zsh-syntax-highlighting zsh-autosuggestions virtualenvwrapper fzf systemadmin docker docker-compose node) 
 # plugins=(git z zsh-syntax-highlighting zsh-autosuggestions virtualenv fzf)
 # Modify the script of virtualenvwrapper and use grep -E 
 # .local/bin/virtualenvwrapper.sh and replace egrep for grep -E 
@@ -89,6 +89,9 @@ source $ZSH/oh-my-zsh.sh
 ################################
 # User configuration
 ################################
+
+# Additional plugins
+source $ZSH/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -142,4 +145,3 @@ source ~/.exports
 # file to source (load) the aliases from the .aliases file:
 source ~/.aliases
 
-source $ZSH/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
