@@ -6,7 +6,7 @@ white='\e[0;37m'
 dotfiles_repo_dir=$(pwd)
 backup_dir="$HOME/.dotfiles.orig"
 dotfiles_home_dir=(.zsh .aliases .bashrc .exports .functions .zshrc)
-dotfiles_xdg_config_dir=(.kitty .htop .i3 .i3blocks .picom .rofi .espanso)
+dotfiles_xdg_config_dir=(.nvim .kitty .htop .i3 .i3blocks .picom .rofi .espanso)
 
 # Print usage message.
 usage() {
