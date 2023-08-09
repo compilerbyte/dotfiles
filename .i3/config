@@ -297,3 +297,7 @@ exec --no-startup-id i3-msg 'workspace $ws10; exec spotify; exec mattermost-desk
 
 # Open Gnome Control 
 bindsym $mod+i exec gnome-control-center
+
+# Apps
+bindsym $mod+Shift+d exec ~/.config/rofi/rofi_apps.sh
+

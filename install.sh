@@ -19,6 +19,7 @@ Options:
     --help    Print this message
     -i        Install all config
     -r        Restore old config
+    -p        Install plugins oh my zsh
 EOF
 }
 
@@ -84,6 +85,54 @@ install_dotfiles() {
   fi
 }
 
+install_plugins(){
+  function green_msg() {
+    echo -e "\e[32m$1\e[0m"
+}
+
+  # Install Oh my Zsh 
+  if [ -d "$HOME/.oh-my-zsh" ]; then
+      echo "Oh My Zsh is already installed."
+  else
+      green_msg "Installing oh my zsh on your system..."
+      sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  fi
+
+  # Install Plugins
+  green_msg "Installing plugins for ohmyzsh..."
+  declare -A repos=(
+      ["https://github.com/romkatv/powerlevel10k.git"]="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k:--depth=1 Repo 1"
+      ["https://github.com/zsh-users/zsh-autosuggestions.git"]="${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions: Repo 2" 
+      ["https://github.com/zsh-users/zsh-syntax-highlighting.git"]="${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting: Repo 3" 
+      ["https://github.com/marlonrichert/zsh-autocomplete.git"]="$ZSH/plugins/zsh-autocomplete:--depth=1 Repo 4" 
+  )
+
+
+for repo_url in "${!repos[@]}"; do
+    repo_destination_and_options="${repos[$repo_url]}"
+    repo_name="${repo_destination_and_options##*:}"
+    repo_destination_and_options="${repo_destination_and_options%:*}"
+    
+    IFS=' ' read -ra destination_options <<< "$repo_destination_and_options"
+    destination="${destination_options[0]}"
+    options="${destination_options[@]:1}"
+
+    # Verificar si el repositorio ya está clonado 
+    if [ -d "$destination" ]; then
+        echo "El repositorio '$repo_name' ya está clonado en '$destination'." 
+    else
+        # Clonar el repositorio en la ubicación de destino con opciones adicionales 
+        git clone $options "$repo_url" "$destination"
+        echo "El repositorio '$repo_name' se ha clonado en '$destination'."
+    fi
+done
+
+}
+
+uninstall_plugins(){
+  echo "Uninstalling plugins..."
+}
+
 install_programs(){
    read -p "Do you want to install programs and dependencies on your system? (y/n): " choice
 
@@ -143,6 +192,9 @@ main() {
         -i)
             install_dotfiles
             install_programs
+            ;;
+        -p)
+            install_plugins
             ;;
         -r)
             uninstall_dotfiles
