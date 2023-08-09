@@ -24,9 +24,6 @@ EOF
 }
 
 install_dotfiles() {
-    read -p "Do you want to install programs and dependencies on your system? (y/n): " choice
-    if [ "$choice" == "y" ] || [ "$choice" == "Y" ]; then
-
       # Backup config.
       if ! [ -f "$backup_dir/check-backup.txt" ]; then
           mkdir -p "$backup_dir/.config"
@@ -79,10 +76,6 @@ install_dotfiles() {
       echo "Please read carefully the error messages and make sure all packages are installed. See more info in README.md." >&2
       echo "Note that the author of this dotfiles uses dev branch in some packages." >&2
       echo -e "If you want to restore your old config, you can use ${red}./install.sh -r${white} command." >&2
-  else
-    echo "Cancel installation of dotfiles"
-    exit
-  fi
 }
 
 install_plugins(){
