@@ -189,14 +189,14 @@ bar {
 	# status_command i3status
 	status_command i3blocks
 	colors {
-		#background #222222ff
+		# background #222222
     background #000000
-		statusline #eeeeee
-		separator #666666
+		statusline #000000
+		separator #000000
    	#                  border  backgr. text
 		focused_workspace  #444444 #444444 #ffb52a
 		active_workspace   #333333 #5f676a #ffffff
-		inactive_workspace #333333 #222222 #888888
+		inactive_workspace #000000 #000000 #888888
 		urgent_workspace   #2f343a #900000 #ffffff
 	}
 }
@@ -211,7 +211,7 @@ bindsym $mod+o workspace prev
 bindsym $mod+p workspace next
 
 #Focused Window
-client.focused #ffe57 #bf7500 #ffe57
+client.focused #ffe57 #345789 #ffe57
 
 # Brightness
 bindsym Control+Shift+F6 exec brightnessctl s 20%-
@@ -246,10 +246,10 @@ bindsym $mod+m exec rofi -show window
 
 # Gaps
 gaps outer 1
-gaps inner 10
+gaps inner 9
 
-# Windows Withouth tittle
-for_window [class="^.*"] border pixel 3 
+# Windows Withouth title
+for_window [class="^.*"] border pixel 2 
 
 # Picom
 exec picom -b -f --no-vsync
