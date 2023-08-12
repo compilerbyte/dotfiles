@@ -4,7 +4,7 @@
 ![xhlar dotfiles](https://camo.githubusercontent.com/c6c38eef47a0cfa9a5a46505a77da416b2ca724e71543f85c97a0cc3dba769ad/68747470733a2f2f6e76636861642e636f6d2f62616e6e65722e77656270)
 
 # Introduction
-Configuration files and programs for Arch or Fedora
+Configuration files
 
 # How to install
 
@@ -14,9 +14,20 @@ Use install.sh for dotfiles and program.sh for programs and dependencies.
 2. ./install.sh -i
 3. Enjoy this configuration
 
-Same instructions as above for programs and dependencies.
+# Before installing dependencies
+The script detected your distribution and install dependencies and programs. 
 
-# Main configuration
+1. chmod +x install.sh
+2. ./install.sh -p
+3. Enjoy this configuration
+
+
+# What contains dotfiles
+
+
+
+
+## Main programs
 
 - [i3](https://github.com/i3/i3) - A tiling window manager.
 - [i3-gnome](https://github.com/i3-gnome/i3-gnome) - Use i3wm/i3-gaps with GNOME Session infrastructure.
@@ -35,7 +46,7 @@ Same instructions as above for programs and dependencies.
 - [Font Awesome](https://github.com/FortAwesome/Font-Awesome) - Iconic font.
 - [picom](https://github.com/yshui/picom) - A lightweight compositor for X11.
 
-# Dependencies
+## Dependencies
 - [xcwd](https://github.com/schischi/xcwd) - A simple tool that prints the current working directory of the currently focused window
 - [libx11-devel](https://packages.fedoraproject.org/pkgs/libX11/libX11-devel/) - Development files for libX11
 
@@ -48,7 +59,7 @@ Same instructions as above for programs and dependencies.
 - [Dark Planet](https://www.pling.com/p/1163924/) - Wallpaper.
 
 ---
-# List of programs 
+## List of programs 
 
 - [coinomi](https://www.coinomi.com/) - Coinomi desktop wallet. Securely store, manage and exchange Bitcoin, Ethereum, and more than 500 other blockchain assets
 - [electrum](https://electrum.org/) - Lightweight Bitcoin wallet 
