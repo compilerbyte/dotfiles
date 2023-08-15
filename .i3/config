@@ -251,8 +251,8 @@ gaps inner 9
 # Windows Withouth title
 for_window [class="^.*"] border pixel 2 
 
-# Picom
-exec picom -b -f --no-vsync
+# Transparency window
+exec picom -b --no-vsync --config ~/.config/picom/picom.conf
 
 # Keyboard Language Default
 exec --no-startup-id setxkbmap "latam"

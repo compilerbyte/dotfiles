@@ -58,7 +58,6 @@ alias tmp='cd ~/Temporary && ls -lA'
 
 # Shortcuts
 alias c='clear'
-alias cat='bat'
 alias ch='echo > ~/.bash_history && echo > ~/.zsh_history'
 alias cz='echo > ~/.z'
 alias e='exit'
