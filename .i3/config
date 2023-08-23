@@ -211,7 +211,7 @@ bindsym $mod+o workspace prev
 bindsym $mod+p workspace next
 
 #Focused Window
-client.focused #ffe57 #345789 #ffe57
+client.focused #ffe57 #984000 #ffe57
 
 # Brightness
 bindsym Control+Shift+F6 exec brightnessctl s 20%-
