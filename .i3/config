@@ -127,10 +127,10 @@ bindsym $mod+dead_acute workspace $ws3
 bindsym $mod+plus workspace $ws4
 bindsym $mod+comma workspace $ws5
 bindsym $mod+period workspace $ws6
-bindsym $mod+apostrophe workspace $ws7
-bindsym $mod+questiondown workspace $ws8
-bindsym $mod+bar workspace $ws9
-bindsym $mod+0 workspace $ws10
+bindsym $mod+bar workspace $ws7
+bindsym $mod+minus workspace $ws8
+bindsym $mod+apostrophe workspace $ws10
+bindsym $mod+questiondown workspace $ws9
 
 # move focused container to workspace
 bindsym $mod+Shift+braceleft move container to workspace $ws1
@@ -139,10 +139,10 @@ bindsym $mod+Shift+dead_acute move container to workspace $ws3
 bindsym $mod+Shift+plus move container to workspace $ws4
 bindsym $mod+Shift+comma move container to workspace $ws5
 bindsym $mod+Shift+period move container to workspace $ws6
-bindsym $mod+Shift+apostrophe move container to workspace $ws7
-bindsym $mod+Shift+questiondown move container to workspace $ws8
-bindsym $mod+Shift+bar move container to workspace $ws9
-bindsym $mod+Shift+0 move container to workspace $ws10
+bindsym $mod+Shift+bar move container to workspace $ws7
+bindsym $mod+Shift+minus move container to workspace $ws8
+bindsym $mod+Shift+questiondown move container to workspace $ws9
+bindsym $mod+Shift+apostrophe move container to workspace $ws10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
