@@ -116,8 +116,8 @@ set $ws4 ""
 set $ws5 ""
 set $ws6 ""
 set $ws7 ""
-set $ws8 "󰒋"
-set $ws9 ""
+set $ws8 ""
+set $ws9 ""
 set $ws10 "󰍹"
 
 # switch to workspace
@@ -128,7 +128,7 @@ bindsym $mod+plus workspace $ws4
 bindsym $mod+comma workspace $ws5
 bindsym $mod+period workspace $ws6
 bindsym $mod+bar workspace $ws7
-bindsym $mod+minus workspace $ws8
+bindsym $mod+BackSpace workspace $ws8
 bindsym $mod+apostrophe workspace $ws10
 bindsym $mod+questiondown workspace $ws9
 
@@ -140,7 +140,7 @@ bindsym $mod+Shift+plus move container to workspace $ws4
 bindsym $mod+Shift+comma move container to workspace $ws5
 bindsym $mod+Shift+period move container to workspace $ws6
 bindsym $mod+Shift+bar move container to workspace $ws7
-bindsym $mod+Shift+minus move container to workspace $ws8
+bindsym $mod+Shift+BackSpace move container to workspace $ws8
 bindsym $mod+Shift+questiondown move container to workspace $ws9
 bindsym $mod+Shift+apostrophe move container to workspace $ws10
 
@@ -277,8 +277,9 @@ bindsym $mod+Shift+Return exec kitty --working-directory="`xcwd`"
 # set monitor workspace 
 workspace $ws1 output HDMI-A-0 
 workspace $ws2 output HDMI-A-0
-workspace $ws10 output DVI-D-0
+workspace $ws8 output DVI-D-0
 workspace $ws9 output DVI-D-0
+workspace $ws10 output DVI-D-0
 
 # move container to the next output
 bindsym $mod+Shift+x move container to output next
