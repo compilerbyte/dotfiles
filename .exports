@@ -9,3 +9,7 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
+
+
+# LOCAL BIN
+export PATH=$PATH:$HOME/.local/bin
