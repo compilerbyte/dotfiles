@@ -83,13 +83,12 @@ install_plugins(){
     echo -e "\e[32m$1\e[0m"
 }
 
-  # Install Plugins
   green_msg "Installing plugins for ohmyzsh..."
   declare -A repos=(
-      ["https://github.com/romkatv/powerlevel10k.git"]="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k:--depth=1 Repo 1"
-      ["https://github.com/zsh-users/zsh-autosuggestions.git"]="${ZSH_CUSTOM:~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions: Repo 2" 
-      ["https://github.com/zsh-users/zsh-syntax-highlighting.git"]="${ZSH_CUSTOM:~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting: Repo 3" 
-      ["https://github.com/marlonrichert/zsh-autocomplete.git"]="$ZSH/plugins/zsh-autocomplete:--depth=1 Repo 4" 
+      ["https://github.com/romkatv/powerlevel10k.git"]="$HOME/.oh-my-zsh/custom/themes/powerlevel10k --depth=1: Repo 1"
+      ["https://github.com/zsh-users/zsh-autosuggestions.git"]="$HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions: Repo 2" 
+      ["https://github.com/zsh-users/zsh-syntax-highlighting.git"]="$HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting: Repo 3" 
+      ["https://github.com/marlonrichert/zsh-autocomplete.git"]="$HOME/.oh-my-zsh/custom/plugins/zsh-autocomplete --depth=1: Repo 4" 
   )
 
 
@@ -116,19 +115,6 @@ done
 
 uninstall_plugins(){
   echo "Uninstalling plugins..."
-}
-
-install_programs(){
-   read -p "Do you want to install programs and dependencies on your system? (y/n): " choice
-
-  if [ "$choice" == "y" ] || [ "$choice" == "Y" ]; then
-      # Ejecuta el archivo .sh para la instalación del programa
-      chmod +x programs.sh
-      ./programs.sh -i
-  else
-      echo "Cancel installation of programs."
-  fi 
-
 }
 
 uninstall_dotfiles() {
@@ -176,7 +162,6 @@ main() {
             ;;
         -i)
             install_dotfiles
-            install_programs
             ;;
         -p)
             install_plugins

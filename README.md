@@ -6,23 +6,25 @@
 # Introduction
 Configuration files
 
-# How to install
-
-Use install.sh for dotfiles and program.sh for programs and dependencies.
+# How to install dotfiles
 
 1. chmod +x install.sh
 2. ./install.sh -i
-3. Enjoy this configuration
 
-# Before installing dependencies
+# How to install plugins for oh my zsh
+1. ./install.sh -p
+
+# How to install dependencies 
 The script detected your distribution and install dependencies and programs. 
 
 1. chmod +x install.sh
 2. ./install.sh -p
-3. Enjoy this configuration
 
-
-# What contains dotfiles
+# Test this dotfiles with docker
+1. docker build -t dotfiles .
+2. docker run -it dotfiles
+3. apt update && apt install git
+5. ./install.sh -h 
 
 
 
