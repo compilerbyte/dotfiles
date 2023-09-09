@@ -56,19 +56,14 @@ SENSOR_CHIP="k10temp-pci-00c3"
 command=$HOME/.config/i3blocks/contrib/cpu_usage2/cpu_usage2
 markup=pango
 interval=persist
-LABEL=<span color="#177">CPU </span>
+LABEL=<span color="#ff1">CPU </span>
 WARN_PERCENT=50
 CRIT_PERCENT=80
 DECIMALS=2
 
-# [ram-used]
-# command=$HOME/.config/i3blocks/contrib/memory/memory | grep -E -o '^[0-9]+.[0-9]G'
-# label=<span color="#199">RAM </span>
-# interval=1
-
 [ram_used]
 command=$HOME/.config/i3blocks/contrib/ram-used/ram-used 
-label=<span color="#199">RAM </span>
+label=<span color="#ff1">RAM </span>
 interval=1
 
 [disk-usage]
