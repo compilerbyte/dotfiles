@@ -1,3 +1,6 @@
+# FLUTTER
+export PATH=$PATH:$HOME/applications/flutter/bin
+
 # ANDROID
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
@@ -13,3 +16,4 @@ export PATH=$PATH:$GOBIN
 
 # LOCAL BIN
 export PATH=$PATH:$HOME/.local/bin
+

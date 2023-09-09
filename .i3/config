@@ -26,6 +26,13 @@ font pango:monospace 4
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
+# gnome settings daemon
+exec --no-startup-id /usr/lib/gsd-xsettings
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+# gnome-screensaveer for lock screen
+exec --no-startup-id /usr/bin/gnome-screensaver
+
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
@@ -219,6 +226,10 @@ bindsym Control+Shift+F7 exec brightnessctl s +20%
 
 # Lock Screen
 bindsym Control+Mod1+l exec "i3lock -c 000000"
+# bindsym Control+Mod1+l exec "gnome-screensaver-command -l"
+# bindsym Control+Mod1+l exec "xdg-screensaver lock"
+# bindsym Control+Mod1+l exec "dbus-send --type=method_call --dest=org.gnome.ScreenSaver /org/gnome/ScreenSaver org.gnome.ScreenSaver.Lock"
+
 
 # Suspend PC
 bindsym Shift+Mod1+l exec "systemctl suspend"
@@ -263,7 +274,7 @@ bindsym $mod+z exec setxkbmap us
 
 
 # Wallpaper
-exec feh --bg-fill $HOME/.config/i3/wallpapers/wallpaper.jpg
+exec feh --bg-fill $HOME/Pictures/Wallpaper/mrrobot.jpg
 
 # Script Switch Monitor 
 bindsym Shift+$mod+p exec $HOME/.config/i3/scripts/display.sh
@@ -293,11 +304,10 @@ bindsym $mod+Shift+2 move scratchpad
 bindsym $mod+2 scratchpad show
 
 # Start applications on workspace
-exec --no-startup-id i3-msg 'workspace $ws9; exec spotify; exec mattermost-desktop;' 
+exec --no-startup-id i3-msg 'workspace $ws9; exec spotify; exec mattermost-desktop; exec kuro' 
 
 # Open Gnome Control 
 bindsym $mod+i exec gnome-control-center
 
 # Apps
 bindsym $mod+Shift+d exec ~/.config/rofi/rofi_apps.sh
-
