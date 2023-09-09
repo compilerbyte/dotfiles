@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Check if the OpenVPN service is running
+if systemctl is-active --quiet openvpn.service; then
+    STATUS=""  # Display a lock symbol to indicate that OpenVPN is active
+else
+    STATUS=""  # Display a different symbol if OpenVPN is not running (adjust as needed)
+fi
+
+echo "$STATUS"
+echo "$STATUS"
+echo ""
+
+

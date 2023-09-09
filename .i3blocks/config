@@ -12,10 +12,25 @@ color=#f8f8f2
 separator_block_width=15
 markup=pango
 
-[openvpn]
-command=$HOME/.config/i3blocks/contrib/openvpn/openvpn
-interval=20
-PID_FILE_FORMAT='/run/openvpn/*.pid'
+# [openvpn]
+# command=$HOME/.config/i3blocks/contrib/openvpn/openvpn
+# interval=20
+# PID_FILE_FORMAT='/run/openvpn/*.pid'
+
+# [openvpn_status]
+# command=$HOME/.config/i3blocks/contrib/openvpn_status/openvpn_status
+# interval=20
+# PID_FILE_FORMAT='/run/openvpn/*.pid'
+#
+[apt-upgrades]
+command=$HOME/.config/i3blocks/contrib/apt-upgrades/apt-upgrades
+interval=3600
+LABEL=<span color="#f8f8f2">APT </span>
+
+[ip]
+command=$HOME/.config/i3blocks/contrib/ip-address/ip-address
+interval=60
+label=<span color="#993333"> </span>
 
 [bandwidth]
 command=$HOME/.config/i3blocks/contrib/bandwidth/bandwidth
@@ -25,26 +40,46 @@ INLABEL=IN
 OUTLABEL=OUT
 #TREAT_UNKNOWN_AS_UP=0
 
-[load_average]
-command=echo -n 'CPU: '; $HOME/.config/i3blocks/contrib/load_average/load_average
-interval=10
+# [load_average]
+# command=echo -n 'CPU: '; $HOME/.config/i3blocks/contrib/load_average/load_average
+# interval=10
 
 [temperature]
 command=$HOME/.config/i3blocks/contrib/temperature/temperature
-label= 
+label=<span color="#f74"> </span>
 interval=1
 T_WARN=70
 T_CRIT=90
 SENSOR_CHIP="k10temp-pci-00c3"
 
 [cpu_usage]
-command=$HOME/.config/i3blocks/contrib/cpu_usage/cpu_usage
-interval=10
-LABEL=CPU 
-min_width=CPU: 100.00%
-T_WARN=50
-T_CRIT=80
+command=$HOME/.config/i3blocks/contrib/cpu_usage2/cpu_usage2
+markup=pango
+interval=persist
+LABEL=<span color="#177">CPU </span>
+WARN_PERCENT=50
+CRIT_PERCENT=80
 DECIMALS=2
+
+# [ram-used]
+# command=$HOME/.config/i3blocks/contrib/memory/memory | grep -E -o '^[0-9]+.[0-9]G'
+# label=<span color="#199">RAM </span>
+# interval=1
+
+[ram_used]
+command=$HOME/.config/i3blocks/contrib/ram-used/ram-used 
+label=<span color="#199">RAM </span>
+interval=1
+
+[disk-usage]
+command=df -h -l --output='used' "$HOME" | grep -E -o '[0-9]+G'
+label=<span color="#2f3"> USAGE </span>
+interval=30
+
+[disk-available]
+command=$HOME/.config/i3blocks/contrib/disk/disk
+interval=30
+label=<span color="#f91"> AVAILABLE </span>
 
 [ssid]
 command=echo -n ' ' ; $HOME/.config/i3blocks/contrib/ssid/ssid
@@ -61,7 +96,6 @@ COLOR_GE80=#00FF00
 
 [volume]
 command=$HOME/.config/i3blocks/contrib/volume/volume
-#LABEL=♪ 
 LABEL=  
 interval=1
 signal=10
@@ -69,38 +103,35 @@ STEP=5%
 #MIXER=[determined automatically]
 #SCONTROL=[determined automatically]
 
-
 [time_cst]
 command=TZ=":US/Central" date '+%H:%M:%S'
 interval=1
-label=<span color="#ff79c6"> </span>
+label=<span color="#fff444"> </span>
 
 [date]
 command=date '+%Y-%m-%d %B/%A'
 interval=60
 label=<span color="#8be9fd"> </span>
 
-[battery]
-command=$HOME/.config/i3blocks/contrib/battery2/battery2
-interval=30
+# [shutdown_menu]
+# interval=once
 
-[ram-free]
-command=free -h --si | awk 'FNR==2{ print $0 }' | awk '{ print $7 }'
-interval=2
-label=<span color="#f1fa8c">M </span>
 
-[ram-used]
-command=echo -n '  '; $HOME/.config/i3blocks/contrib/memory/memory | grep -E -o '^[0-9]+.[0-9]G'
-interval=3
+# [battery]
+# command=$HOME/.config/i3blocks/contrib/battery2/battery2
+# interval=30
 
-[home]
-command=df -h /home | awk 'FNR==2{print $4}'
-interval=3
-label=<span color="#ff79c6"> </span>
+# [ram-free]
+# command=free -h --si | awk 'FNR==2{ print $0 }' | awk '{ print $7 }'
+# interval=2
+# label=<span color="#f1fa8c">M </span>
 
-[disk-home]
-command=echo -n '  '; df -h -l --output='used' "$HOME" | grep -E -o '[0-9]+G'
-interval=30
+# [home]
+# command=df -h /home/xhlar/Downloads/ | awk 'FNR==2{print $4}'
+# interval=3
+# label=<span color="#ff79c6"> </span>
 
 [shutdown_menu]
-full_text=<span color="#50fa7b"> </span>
+command=$HOME/.config/i3blocks/contrib/shutdown_menu/shutdown_menu
+signal=1
+full_text=<span color="#ff5555"> </span>

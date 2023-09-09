@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Function to get the used RAM in percentage
+get_used_ram() {
+    total_mem=$(free -m | awk '/^Mem:/ {print $2}')
+    used_mem=$(free -m | awk '/^Mem:/ {print $3}')
+    used_percentage=$((used_mem * 100 / total_mem))
+    echo "$used_percentage%"
+}
+
+used_ram=$(get_used_ram)
+
+echo "$used_ram"
+echo "$used_ram"
+echo ""
+
+

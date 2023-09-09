@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Get the local IP address
+IP_ADDRESS=$(hostname -I | cut -d' ' -f1)
+
+if [[ "${IP_ADDRESS}" != "" ]]; then
+  echo "${IP_ADDRESS}"  # You can use a Unicode symbol or text to represent the IP address
+  echo "${IP_ADDRESS}"  # This line is optional and can be customized
+  echo ""
+else
+  echo "No IP"  # Display a message when no IP address is found
+  echo "No IP"  # This line is optional and can be customized
+  echo ""
+fi
+
