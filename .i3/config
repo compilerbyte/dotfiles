@@ -304,7 +304,7 @@ bindsym $mod+Shift+2 move scratchpad
 bindsym $mod+2 scratchpad show
 
 # Start applications on workspace
-exec --no-startup-id i3-msg 'workspace $ws9; exec spotify; exec mattermost-desktop; exec kuro' 
+exec --no-startup-id i3-msg 'workspace $ws9; exec spotify; exec mattermost-desktop; exec kuro; exec whatsapp' 
 
 # Open Gnome Control 
 bindsym $mod+i exec gnome-control-center

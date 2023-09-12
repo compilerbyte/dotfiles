@@ -90,7 +90,7 @@ alias quit='exit'
 
 # Programs
 alias pdf=evince
-alias epub="com.github.johnfactotum.Foliate"
-alias anydesk="flatpak run com.anydesk.Anydesk"
-alias obs="flatpak run com.obsproject.Studio"
-alias gromit="flatpak run net.christianbeier.Gromit-MPX"
+# alias epub="com.github.johnfactotum.Foliate"
+# alias anydesk="flatpak run com.anydesk.Anydesk"
+# alias obs="flatpak run com.obsproject.Studio"
+# alias gromit="flatpak run net.christianbeier.Gromit-MPX"

@@ -101,7 +101,7 @@ STEP=5%
 [time_cst]
 command=TZ=":US/Central" date '+%H:%M:%S'
 interval=1
-label=<span color="#fff444"> </span>
+label=<span color="#8be9fd"> </span>
 
 [date]
 command=date '+%Y-%m-%d %B/%A'
