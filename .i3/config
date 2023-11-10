@@ -30,6 +30,9 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id /usr/lib/gsd-xsettings
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
+
+
+
 # gnome-screensaveer for lock screen
 # exec --no-startup-id /usr/bin/gnome-screensaver
 
@@ -304,7 +307,7 @@ bindsym $mod+Shift+2 move scratchpad
 bindsym $mod+2 scratchpad show
 
 # Start applications on workspace
-exec --no-startup-id i3-msg 'workspace $ws9; exec spotify; exec mattermost-desktop; exec kuro; exec whatsapp' 
+exec --no-startup-id i3-msg 'workspace $ws9; exec mattermost-desktop; exec kuro; exec whatsapp' 
 
 # Open Gnome Control 
 bindsym $mod+i exec gnome-control-center
