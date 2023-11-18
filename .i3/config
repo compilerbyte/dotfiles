@@ -294,6 +294,10 @@ workspace $ws2 output HDMI-A-0
 workspace $ws9 output DVI-D-0
 workspace $ws10 output DVI-D-0
 
+# set monitor hz 
+exec xrandr --output HDMI-A-0 --mode 1920x1080 --rate 74.97
+
+
 # move container to the next output
 bindsym $mod+Shift+x move container to output next
 
