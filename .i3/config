@@ -235,7 +235,7 @@ bindsym Control+Mod1+l exec "i3lock -c 000000"
 
 
 # Suspend PC
-bindsym $mod+Shift+l exec "systemctl suspend"
+bindsym Shift+Mod1+l exec "systemctl suspend"
 
 # Run File Explorer
 bindsym $mod+n exec nautilus
