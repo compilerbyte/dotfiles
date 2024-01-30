@@ -140,7 +140,7 @@ bindsym $mod+period workspace $ws6
 bindsym $mod+bar workspace $ws7
 bindsym $mod+1 workspace $ws8
 bindsym $mod+questiondown workspace $ws9
-bindsym $mod+BackSpace workspace $ws10
+bindsym $mod+apostrophe workspace $ws10
 
 # move focused container to workspace
 bindsym $mod+Shift+braceleft move container to workspace $ws1
@@ -152,7 +152,7 @@ bindsym $mod+Shift+period move container to workspace $ws6
 bindsym $mod+Shift+bar move container to workspace $ws7
 bindsym $mod+Shift+1 move container to workspace $ws8
 bindsym $mod+Shift+questiondown move container to workspace $ws9
-bindsym $mod+Shift+BackSpace move container to workspace $ws10
+bindsym $mod+Shift+apostrophe move container to workspace $ws10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -312,6 +312,9 @@ bindsym $mod+2 scratchpad show
 
 # Start applications on workspace
 exec --no-startup-id i3-msg 'workspace $ws9; exec mattermost-desktop; exec kuro; exec whatsapp' 
+
+# Configure Network Speed
+exec sudo ethtool -s eno1 autoneg on speed 100 duplex full
 
 # Open Gnome Control 
 bindsym $mod+i exec gnome-control-center
