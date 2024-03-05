@@ -7,9 +7,13 @@
 Configuration files
 
 # How to install dotfiles
-
 1. chmod +x install.sh
 2. ./install.sh -i
+
+# How to install nvim 
+0. cd .nvim 
+1. git submodule init
+2. git submodule update
 
 # How to install plugins for oh my zsh
 1. ./install.sh -p

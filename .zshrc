@@ -146,5 +146,3 @@ source ~/.exports
 # file to source (load) the aliases from the .aliases file:
 source ~/.aliases
 
-
-[[ -s "/home/xhlar/.gvm/scripts/gvm" ]] && source "/home/xhlar/.gvm/scripts/gvm"

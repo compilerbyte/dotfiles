@@ -1,3 +1,6 @@
+# LOCAL BIN
+export PATH=$PATH:$HOME/.local/bin
+
 # FLUTTER
 export PATH=$PATH:$HOME/applications/flutter/bin
 
@@ -15,8 +18,10 @@ export GOBIN=$GOPATH/bin
 export GOPROXY=https://proxy.golang.org
 export PATH=$PATH:$GOBIN
 
+# GOLANG VERSION MANAGER
+[[ -s "/home/xhlar/.gvm/scripts/gvm" ]] && source "/home/xhlar/.gvm/scripts/gvm"
 
-
-# LOCAL BIN
-export PATH=$PATH:$HOME/.local/bin
-
+# NODE VERSION MANAGER
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
