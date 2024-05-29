@@ -1,4 +1,3 @@
-setxkbmap latam
 export TERM=xterm-256color
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -146,3 +145,7 @@ source ~/.exports
 # file to source (load) the aliases from the .aliases file:
 source ~/.aliases
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
