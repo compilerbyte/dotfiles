@@ -2,7 +2,8 @@
 export PATH=$PATH:$HOME/.local/bin
 
 # Flutter
-export PATH=$PATH:$HOME/applications/flutter/bin
+# export PATH=$PATH:$HOME/applications/flutter/bin
+export PATH=$PATH:$HOME/development/flutter/bin
 
 # Android Env
 export ANDROID_HOME=$HOME/Android/Sdk
@@ -26,3 +27,8 @@ export PATH=$PATH:$HOME/go/bin/
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+#CUDA
+export CUDNN_PATH="$HOME/.local/lib/python3.10/site-packages/nvidia/cudnn"
+export LD_LIBRARY_PATH="$CUDNN_PATH/lib":"/usr/local/cuda/lib64"
+export PATH="$PATH":"/usr/local/cuda/bin"
